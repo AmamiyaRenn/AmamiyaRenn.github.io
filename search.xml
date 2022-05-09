@@ -1,185 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>GAMES202</title>
-    <url>/2022/05/09/GAMES202/</url>
-    <content><![CDATA[<h1 id="GAMES202-记录"><a href="#GAMES202-记录" class="headerlink" title="GAMES202 记录"></a>GAMES202 记录</h1><h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><ol>
-<li>模型渲染不出来<ol>
-<li>git clone three.js</li>
-<li>把 homework 中的 MTLLoader、OBJLoader、OribitControls 用上面下载的文件进行替代</li>
-<li>把下载的源码中的 three.min.js 放入 lib</li>
-<li>修改 index.html 中<code>&lt;script src=&quot;lib/three.js&quot; defer&gt;&lt;/script&gt;</code><ol>
-<li>改为<code>&lt;script src=&quot;lib/three.min.js&quot; defer&gt;&lt;/script&gt;</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="重难点"><a href="#重难点" class="headerlink" title="重难点"></a>重难点</h2><h3 id="ShadowMap"><a href="#ShadowMap" class="headerlink" title="ShadowMap"></a>ShadowMap</h3><ol>
-<li>硬阴影<ol>
-<li>渲染步骤<ol>
-<li>以光源视角渲染场景<ol>
-<li>生成 z-buffer，命名为 shadowMap</li>
-</ol>
-</li>
-<li>以相机视角渲染场景<ol>
-<li>对于任意一个 fragment（此处简单理解为像素），通过它的世界坐标和光源视角的 MVP 矩阵，可以算出光源视角下的对应的深度 d(shadowMCoord.z)与 z-buffer 的对应 UV 值（shadowCoord.xy）</li>
-<li>通过 shadowCoord.xy 查询对应的 shadowMap 上的深度 s</li>
-<li>如果 d&lt;&#x3D;s，则可被光源看见，从而不在阴影中</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>图形学RoadMap</title>
+      <link href="/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/"/>
+      <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
+      
+        <content type="html"><![CDATA[<h1 id="学习路径与资料"><a href="#学习路径与资料" class="headerlink" title="学习路径与资料"></a>学习路径与资料</h1><ol><li>GAMES101<ol><li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li></ol></li><li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li></ol>]]></content>
+      
+      
       <categories>
-        <category>图形学</category>
-        <category>GAMES202</category>
+          
+          <category> 图形学 </category>
+          
       </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>GAMES202</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些细碎知识点的记录</title>
-    <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h1><h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><ol>
-<li>backgound-cover<ol>
-<li><code>sudo chown -R $(whoami) /usr/share/code</code></li>
-</ol>
-</li>
-</ol>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol>
-<li>函数注释<ol>
-<li><code>Ctrl+super+t</code></li>
-</ol>
-</li>
-</ol>
-<h2 id="linux-操作"><a href="#linux-操作" class="headerlink" title="linux 操作"></a>linux 操作</h2><h3 id="美化-1"><a href="#美化-1" class="headerlink" title="美化"></a>美化</h3><ol>
-<li>当 StartupWMClass 为空时，启动应用会出现双图标现象<ol>
-<li>终端输入：xprop |grep WM_CLASS，此时鼠标指针会变成一个十字准心，然后点击一下正在运行的软件，终端会反馈一条信息，包括 2 个字符串</li>
-<li>如果没有的话可以使用 Alt+CapsLock 切换多任务的时候查看进程名字。<br>把第 1 个（也可能是第 2 个）字符串里的内容添加到 StartupWMClass 里，保存，关闭应用重<br>新打开</li>
-</ol>
-</li>
-<li>对于登录系统的紫色过渡动画，就是输入密码回车，到进入系统这个过程的紫色动画，可以通过 gnome 的扩展 extension 进行屏蔽，名字是 Good Bye GDM3 Login Screen to Desktop Flick for Ubuntu 20.04 only</li>
-</ol>
-<h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><ol>
-<li><p>重装系统</p>
-<ol>
-<li>重装 windows 后要<ol>
-<li>把 ubuntu 顺位调高</li>
-<li>在 shell 中输入<ol>
-<li><code>sudo update-grub2</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>代理</p>
-<ol>
-<li>clash<ol>
-<li>下载<ol>
-<li>最好提前备份好一个</li>
-</ol>
-</li>
-<li>把代理商提供的 url 进行下载</li>
-</ol>
-</li>
-<li>设置中设置手动网络代理<ol>
-<li>http 和 https<ol>
-<li>加入 clash 的 port</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>终端中使用代理<ol>
-<li>在 shellrc 中加入</li>
-<li><code>export http_proxy=&quot;http://localhost:port&quot; export https_proxy=&quot;http://localhost:port&quot;</code></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>git</p>
-<ol>
-<li>tag<ol>
-<li>查看标签<ol>
-<li><code>git tag </code></li>
-</ol>
-</li>
-<li>查看对应标签状态<ol>
-<li><code>git checkout 1.0.0</code></li>
-</ol>
-</li>
-<li>创建带备注标签<ol>
-<li><code>git tag -a 1.0.0 -m &quot;这是备注信息&quot;</code></li>
-</ol>
-</li>
-<li>删除标签(本地)<ol>
-<li><code>git tag -d 1.0.0</code></li>
-</ol>
-</li>
-<li>将本地标签发布到远程仓库（所有）<ol>
-<li><code>git push origin --tags</code></li>
-</ol>
-</li>
-<li>将本地标签发布到远程仓库（指定版本）<ol>
-<li><code>git push origin 1.0.0</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>解压乱码</p>
-<ol>
-<li><code>unzip -O GBK xxx.zip</code> (用 CP936, GB18030 也可以)</li>
-</ol>
-</li>
-</ol>
-<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><h3 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h3><ol>
-<li>profile<ol>
-<li>使用 gprof</li>
-</ol>
-</li>
-</ol>
-<h2 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h2><ol>
-<li>字体过小<ol>
-<li><a href="https://liupei.ink/index.php/2021/02/16/linux%E4%B8%8Bmatlab%E5%AD%97%E4%BD%93%E8%BF%87%E5%B0%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">linux 下 matlab 字体过小解决方法</a></li>
-</ol>
-</li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 图形学 </tag>
+            
+            <tag> RoadMap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GAMES202</title>
+      <link href="/2022/05/09/GAMES202/"/>
+      <url>/2022/05/09/GAMES202/</url>
+      
+        <content type="html"><![CDATA[<h1 id="GAMES202-记录"><a href="#GAMES202-记录" class="headerlink" title="GAMES202 记录"></a>GAMES202 记录</h1><h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><ol><li>模型渲染不出来<ol><li>git clone three.js</li><li>把 homework 中的 MTLLoader、OBJLoader、OribitControls 用上面下载的文件进行替代</li><li>把下载的源码中的 three.min.js 放入 lib</li><li>修改 index.html 中<code>&lt;script src=&quot;lib/three.js&quot; defer&gt;&lt;/script&gt;</code><ol><li>改为<code>&lt;script src=&quot;lib/three.min.js&quot; defer&gt;&lt;/script&gt;</code></li></ol></li></ol></li></ol><h2 id="重难点"><a href="#重难点" class="headerlink" title="重难点"></a>重难点</h2><h3 id="ShadowMap"><a href="#ShadowMap" class="headerlink" title="ShadowMap"></a>ShadowMap</h3><ol><li>硬阴影<ol><li>渲染步骤<ol><li>以光源视角渲染场景<ol><li>生成 z-buffer，命名为 shadowMap</li></ol></li><li>以相机视角渲染场景<ol><li>对于任意一个 fragment（此处简单理解为像素），通过它的世界坐标和光源视角的 MVP 矩阵，可以算出光源视角下的对应的深度 d(shadowMCoord.z)与 z-buffer 的对应 UV 值（shadowCoord.xy）</li><li>通过 shadowCoord.xy 查询对应的 shadowMap 上的深度 s</li><li>如果 d&lt;&#x3D;s，则可被光源看见，从而不在阴影中</li></ol></li></ol></li></ol></li></ol>]]></content>
+      
+      
       <categories>
-        <category>教程</category>
+          
+          <category> 图形学 </category>
+          
+          <category> GAMES202 </category>
+          
       </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>VSCode</tag>
-        <tag>Linux</tag>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图形学RoadMap</title>
-    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<h1 id="学习路径与资料"><a href="#学习路径与资料" class="headerlink" title="学习路径与资料"></a>学习路径与资料</h1><ol>
-<li>GAMES101<ol>
-<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
-</ol>
-</li>
-<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 图形学 </tag>
+            
+            <tag> GAMES202 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>一些细碎知识点的记录</title>
+      <link href="/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
+      <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h1><h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><ol><li>backgound-cover<ol><li><code>sudo chown -R $(whoami) /usr/share/code</code></li></ol></li></ol><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol><li>函数注释<ol><li><code>Ctrl+super+t</code></li></ol></li></ol><h2 id="linux-操作"><a href="#linux-操作" class="headerlink" title="linux 操作"></a>linux 操作</h2><h3 id="美化-1"><a href="#美化-1" class="headerlink" title="美化"></a>美化</h3><ol><li>当 StartupWMClass 为空时，启动应用会出现双图标现象<ol><li>终端输入：xprop |grep WM_CLASS，此时鼠标指针会变成一个十字准心，然后点击一下正在运行的软件，终端会反馈一条信息，包括 2 个字符串</li><li>如果没有的话可以使用 Alt+CapsLock 切换多任务的时候查看进程名字。<br>把第 1 个（也可能是第 2 个）字符串里的内容添加到 StartupWMClass 里，保存，关闭应用重<br>新打开</li></ol></li><li>对于登录系统的紫色过渡动画，就是输入密码回车，到进入系统这个过程的紫色动画，可以通过 gnome 的扩展 extension 进行屏蔽，名字是 Good Bye GDM3 Login Screen to Desktop Flick for Ubuntu 20.04 only</li></ol><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><ol><li><p>重装系统</p><ol><li>重装 windows 后要<ol><li>把 ubuntu 顺位调高</li><li>在 shell 中输入<ol><li><code>sudo update-grub2</code></li></ol></li></ol></li></ol></li><li><p>代理</p><ol><li>clash<ol><li>下载<ol><li>最好提前备份好一个</li></ol></li><li>把代理商提供的 url 进行下载</li></ol></li><li>设置中设置手动网络代理<ol><li>http 和 https<ol><li>加入 clash 的 port</li></ol></li></ol></li><li>终端中使用代理<ol><li>在 shellrc 中加入</li><li><code>export http_proxy=&quot;http://localhost:port&quot; export https_proxy=&quot;http://localhost:port&quot;</code></li></ol></li></ol></li><li><p>git</p><ol><li>tag<ol><li>查看标签<ol><li><code>git tag </code></li></ol></li><li>查看对应标签状态<ol><li><code>git checkout 1.0.0</code></li></ol></li><li>创建带备注标签<ol><li><code>git tag -a 1.0.0 -m &quot;这是备注信息&quot;</code></li></ol></li><li>删除标签(本地)<ol><li><code>git tag -d 1.0.0</code></li></ol></li><li>将本地标签发布到远程仓库（所有）<ol><li><code>git push origin --tags</code></li></ol></li><li>将本地标签发布到远程仓库（指定版本）<ol><li><code>git push origin 1.0.0</code></li></ol></li></ol></li></ol></li><li><p>解压乱码</p><ol><li><code>unzip -O GBK xxx.zip</code> (用 CP936, GB18030 也可以)</li></ol></li></ol><h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><h3 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h3><ol><li>profile<ol><li>使用 gprof</li></ol></li></ol><h2 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h2><ol><li>字体过小<ol><li><a href="https://liupei.ink/index.php/2021/02/16/linux%E4%B8%8Bmatlab%E5%AD%97%E4%BD%93%E8%BF%87%E5%B0%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">linux 下 matlab 字体过小解决方法</a></li></ol></li></ol>]]></content>
+      
+      
       <categories>
-        <category>图形学</category>
+          
+          <category> 教程 </category>
+          
       </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>RoadMap</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> VSCode </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> C/C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
