@@ -1,0 +1,77 @@
+#update
+# npm update hexo-theme-butterfly
+
+# 首页
+default_top_img: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"
+
+# 导航界面
+menu:
+  首页: / || fas fa-home
+  时间轴: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  清单||fa fa-heartbeat:
+    音乐: /music/ || fas fa-music
+    照片: /Gallery/ || fas fa-images
+    电影: /movies/ || fas fa-video
+  友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-heart
+
+# 社交网站图标
+social:
+  fab fa-github: https://github.com/AmamiyaRenn || Github
+  fab fa-bilibili: https://space.bilibili.com/20287832 || bilibili
+  fas fa-envelope: mailto:379617892@qq.com || Email
+  fab fa-zhihu: https://www.zhihu.com/people/aprilzhu-yan-can || zhihu
+
+# 文章
+## 封面
+cover:
+  # 是否显示文章封面
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  # 封面显示的位置
+  # 三个值可配置 left , right , both
+  position: both
+  # 当没有设置cover时，默认的封面显示
+  default_cover:
+    - https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
+## 文章页相关配置
+### meta显示
+post_meta:
+  page:
+    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: date # date/relative 显示日期还是相对日期
+    categories: true # true or false 主页是否显示分类
+    tags: true # true or false 主页是否显示标籤
+    label: true # true or false 显示描述性文字
+  post:
+    date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
+    date_format: relative # date/relative 显示日期还是相对日期
+    categories: true # true or false 文章页是否显示分类
+    tags: true # true or false 文章页是否显示标签
+    label: true # true or false 显示描述性文字
+### 版权
+post_copyright:
+  enable: true
+  decode: false # 由于Hexo 4.1开始，默认对网址进行解码，以至于如果是中文网址，会被解码，可设置decode: true来显示中文网址
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# 代码
+## 高亮样式
+highlight_theme: light
+## 支持代码复制
+highlight_copy: true
+## 代码框展开/关闭
+highlight_shrink: false #代码框全展开，需点击 '>' 关闭
+## 代码换行
+code_word_wrap: true
+
+# A simple 404 page
+error_404:
+  enable: true
+  subtitle: "页面没有找到"
+  background:
