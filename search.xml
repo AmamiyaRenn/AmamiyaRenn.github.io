@@ -3,7 +3,7 @@
   <entry>
     <title>GAMES202</title>
     <url>/2022/05/09/GAMES202/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>GAMES202 记录</h1>
+    <content><![CDATA[<h1>GAMES202 记录</h1>
 <h2 id="踩坑记录">踩坑记录</h2>
 <ol>
 <li>模型渲染不出来
@@ -56,7 +56,7 @@
   <entry>
     <title>图形学RoadMap</title>
     <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>学习路径与资料</h1>
+    <content><![CDATA[<h1>学习路径与资料</h1>
 <ol>
 <li>GAMES101
 <ol>
@@ -77,7 +77,7 @@
   <entry>
     <title>一些细碎知识点的记录</title>
     <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>记录</h1>
+    <content><![CDATA[<h1>记录</h1>
 <h2 id="VSCode">VSCode</h2>
 <h3 id="美化">美化</h3>
 <ol>
