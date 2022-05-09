@@ -126,7 +126,6 @@ katex:
   # false 需要时加载，须在使用的Markdown Front-matter 加上 katex: true
   per_page: false
   hide_scrollbar: true
-
 #* 音乐播放器
 aplayer:
   asset_inject: false
