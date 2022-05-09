@@ -1,7 +1,11 @@
 - class_name: 友情链接
-  class_desc: 主题来源
+  class_desc: 网站组成
   link_list:
+    - name: Hexo
+      link: https://hexo.io/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简洁且高效的博客框架
     - name: butterfly
       link: https://butterfly.js.org/
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 一个优雅的hexo主题
+      descr: A Simple and Card UI Design theme for Hexo

@@ -9,7 +9,7 @@ description: "人从根本上来说是时间性的存在"
 keywords:
 author: AmamiyaRenn
 language: zh-CN
-timezone: ""
+timezone: "Asia/Shanghai"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -105,3 +105,38 @@ deploy:
   type: git
   repo: https://github.com/AmamiyaRenn/AmamiyaRenn.github.io.git
   branch: master
+
+# search
+search:
+  path: search.xml
+  field: post # post代表仅搜索博客文章，page代表搜索页面，all代表全部搜索
+  content: true
+  limit: 9999 # 输入搜索字符上限
+
+#* markdown
+markdown:
+  plugins:
+    - plugin:
+      name: "@neilsustc/markdown-it-katex"
+      options:
+        strict: false
+katex:
+  enable: true
+  # true 表示每一页都加载katex.js
+  # false 需要时加载，须在使用的Markdown Front-matter 加上 katex: true
+  per_page: false
+  hide_scrollbar: true
+
+#* 音乐播放器
+aplayer:
+  asset_inject: false
+# #* sitemap for baidu
+# sitemap:
+#   path:
+#     - sitemap.xml
+#     - sitemap.txt
+#   template: ./sitemap_template.xml
+#   template_txt: ./sitemap_template.txt
+#   rel: false
+#   tags: true
+#   categories: true

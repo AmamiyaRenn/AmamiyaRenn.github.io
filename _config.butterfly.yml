@@ -1,10 +1,20 @@
-#update
+#* update
 # npm update hexo-theme-butterfly
 
-# 首页
-default_top_img: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"
+#* 插入代码到</head>之前与</body>之前
+inject:
+  head:
+#   - <link rel="stylesheet" href="//at.alicdn.com/t/font_3387690_3kpdr5jkp2j.css">
+  bottom: 
 
-# 导航界面
+#* 头图
+##* 首页
+index_img: "/img/Xenoblade2 Hikari.jpg" 
+##* 默认
+default_top_img: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)" 
+# default_top_img: /img/
+
+#* 导航界面
 menu:
   首页: / || fas fa-home
   时间轴: /archives/ || fas fa-archive
@@ -17,15 +27,135 @@ menu:
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
-# 社交网站图标
+#* 图标
+##* 社交网站
 social:
-  fab fa-github: https://github.com/AmamiyaRenn || Github
-  fab fa-bilibili: https://space.bilibili.com/20287832 || bilibili
+  # fab fa-github: https://github.com/AmamiyaRenn || Github
+  fab fa-bilibili: https://space.bilibili.com/20287832 || Bilibili
   fas fa-envelope: mailto:379617892@qq.com || Email
-  fab fa-zhihu: https://www.zhihu.com/people/aprilzhu-yan-can || zhihu
+  fab fa-zhihu: https://www.zhihu.com/people/aprilzhu-yan-can || Zhihu
 
-# 文章
-## 封面
+#* 头像
+avatar:
+  img: /img/Q版雨宫莲.png
+#   effect: true # 头像会一直转圈
+
+#* 图片
+##* 描述
+photofigcaption: true
+##* 大图查看模式
+fancybox: true # fancybox http://fancyapps.com/fancybox/3/
+
+#* 复制相关配置
+#* copyright: Add the copyright information after copied content (复制的内容后面加上版权信息)
+copy:
+  enable: true # 是否开启网站复制权限
+  copyright: # 复制的内容后面加上版权信息
+    enable: true # 是否开启复制版权信息添加
+    limit_count: 50 # 字数限制，当复制文字大于这个字数限制时，将在复制的内容后面加上版权信息
+
+#* 主页文章节选(自动节选和文章页description)
+index_post_content:
+  # 1.只显示description/2.优先选择description，如果没有配置description，则显示自动节选的内容/3.只显示自动节选/4.不显示文章内容
+  method: 2 
+  length: 500 # if you set method to 2 or 3, the length need to config
+
+#* Footer 设置
+##* 博客起始年份
+footer:
+  owner:
+    enable: true
+    since: 2022
+  # custom_text: Hi, welcome to my <a href="https://butterfly.js.org/">blog</a>! # 页脚自定义文本
+##* footer是否显示图片背景(与top_img一致)
+footer_bg: true
+
+#* 右下角按钮
+##* 夜间模式
+darkmode:
+  enable: true
+  # dark mode和 light mode切换按钮
+  button: true
+  autoChangeMode: false
+  # 1 跟随系统而变化，不支持的浏览器/系统将按照时间晚上6点到早上6点之间切换为 dark mode
+  # 2 只按照时间 晚上6点到早上6点之间切换为 dark mode,其余时间为light mode
+  # false 取消自动切换
+##* 阅读模式
+readmode: true
+
+#* 侧边栏设置
+##* 访问人数
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+##* 运行时间
+runtimeshow:
+  enable: true
+  publish_date: 2022/5/8 21:30:00
+  #网页开通时间
+  #格式: 月/日/年 时间
+  #也可以写成 年/月/日 时间
+##* 字数统计
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+# ##* 最新评论
+# # Aside widget - Newest Comments
+# newest_comments:
+#   enable: true
+#   sort_order: # Don't modify the setting unless you know how it works
+#   limit: 6 # 显示的数量
+#   storage: 10 # 设置缓存时间，单位：分钟
+#   avatar: true # 是否显示头像
+# ##* 评论
+# comments:
+#   # Up to two comments system, the first will be shown as default
+#   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
+#   use: Valine,Disqus
+#   text: true # Display the comment name next to the button
+#   # lazyload: The comment system will be load when comment element enters the browser's viewport.
+#   # If you set it to true, the comment count will be invalid
+#   lazyload: true
+#   count: true # Display comment count in top_img
+#   card_post_count: false # Display comment count in Home Page
+# ###* valine设置
+# valine:
+#   appId: # leancloud application app id
+#   appKey: # leancloud application app key
+#   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+#   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+#   bg: # valine background
+#   visitor: false
+#   option:
+
+#* Tag Plugin
+##* Note
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: modern
+  icons: false
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+##* mermaid
+#* see https://github.com/mermaid-js/mermaid
+mermaid:
+  enable: true
+  # built-in themes: default/forest/dark/neutral
+  theme:
+    light: default
+    dark: dark
+
+#* 文章
+##* 封面
 cover:
   # 是否显示文章封面
   index_enable: true
@@ -33,12 +163,12 @@ cover:
   archives_enable: true
   # 封面显示的位置
   # 三个值可配置 left , right , both
-  position: both
+  position: left
   # 当没有设置cover时，默认的封面显示
   default_cover:
     - https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
-## 文章页相关配置
-### meta显示
+##* 文章页相关配置
+###* meta显示
 post_meta:
   page:
     date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
@@ -52,26 +182,263 @@ post_meta:
     categories: true # true or false 文章页是否显示分类
     tags: true # true or false 文章页是否显示标签
     label: true # true or false 显示描述性文字
-### 版权
+###* 版权
 post_copyright:
   enable: true
   decode: false # 由于Hexo 4.1开始，默认对网址进行解码，以至于如果是中文网址，会被解码，可设置decode: true来显示中文网址
   author_href:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+##* TOC
+toc:
+  post: true # 文章页是否显示 TOC
+  page: false # 普通页面是否显示 TOC
+  number: true # 是否显示章节数
+  expand: false # 是否展开 TOC
+  style_simple: false # 简洁模式（侧边栏只显示 TOC, 只对文章页有效 ）
+##* 相关文章
+related_post:
+  enable: true
+  limit: 3 # 显示推荐文章数目
+  date_type: created # or created or updated 文章日期显示创建日或者更新日
+##* anchor
+# when you scroll in post , the url will update according to header id.
+anchor: true
+# ##* Displays outdated notice for a post (文章过期提醒)
+# noticeOutdate:
+#   enable: true
+#   style: flat # style: simple/flat
+#   limit_day: 365 # When will it be shown
+#   position: top # position: top/bottom
+#   message_prev: It has been
+#   message_next: days since the last update, the content of the article may be outdated.
+# ## Post edit
+# # Easily browse and edit blog source code online.
+# post_edit:
+#   enable: false
+#   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
+#   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
+#   url:
 
-# 代码
-## 高亮样式
-highlight_theme: light
-## 支持代码复制
+#* 代码
+##* 高亮样式
+highlight_theme: mac
+##* 支持代码复制
 highlight_copy: true
-## 代码框展开/关闭
+##* 代码框展开/关闭
 highlight_shrink: false #代码框全展开，需点击 '>' 关闭
-## 代码换行
+##* 代码换行
 code_word_wrap: true
 
-# A simple 404 page
+#* A simple 404 page
 error_404:
   enable: true
   subtitle: "页面没有找到"
   background:
+
+#* 搜索系统
+##* 本地搜索
+local_search:
+  enable: true # 是否开启本地搜索
+  preload: true # 预加载，开启后，进入网页后会自动加载搜索文件。关闭时，只有点击搜索按钮后，才会加载搜索文件
+  CDN: # 搜索文件的 CDN 地址（默认使用的本地链接）
+# algolia_search:
+#   enable: true
+#   hits:
+#     per_page: 6
+
+#* 网站验证
+site_verification:
+  - name: google-site-verification
+    content: 1AIHpPe_idvGowow-t0khCG3nqTILPg88P5adSeI_YM
+  - name: baidu-site-verification
+    content: code-adJdvvUJxy
+
+#* 特效
+##* 打字效果
+# Typewriter Effect (打字效果)
+# https://github.com/disjukr/activate-power-mode
+activate_power_mode:
+  enable: true
+  colorful: true # open particle animation (冒光特效)
+  shake: false #  open shake (抖动特效)
+  mobile: true # false 手机端不显示 true 手机端显示
+##* 背景特效
+# ###* 静态缎带
+# canvas_ribbon:
+#   enable: false
+#   size: 150
+#   alpha: 0.6
+#   zIndex: -1
+#   click_to_change: false #设置是否每次点击都更换綵带
+#   mobile: true # false 手机端不显示 true 手机端显示
+###* 动态缎带
+canvas_fluttering_ribbon:
+  enable: true
+  mobile: true # false 手机端不显示 true 手机端显示
+# ###* nest
+# canvas_nest:
+#   enable: true
+#   color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+#   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
+#   zIndex: -1 # z-index property of the background, default: -1.
+#   count: 99 # the number of lines, default: 99.
+#   mobile: true # false 手机端不显示 true 手机端显示
+##* 鼠标点击效果
+###* 点击出现爱心
+click_heart:
+  enable: true
+  mobile: false
+# ###* 点击出现文字，文字可自行修改
+# ClickShowText:
+#   enable: false
+#   text:
+#     - I
+#     - LOVE
+#     - YOU
+#   fontSize: 15px
+#   random: false # 文字随机显示
+#   mobile: false
+##* 页面加载动画preloader
+preloader: true # 加载动画 Loading Animation
+
+#* 美化
+##* 美化页面显示
+beautify:
+  enable: true
+  field: site # site/post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#F47466"
+##* 网站背景
+# # 图片格式 url(http://xxxxxx.com/xxx.jpg)
+# # 颜色（HEX值/RGB值/顔色单词/渐变色)
+# # 留空 不显示背景
+# background:
+##* 自定义全局字体和字体大小
+# Don't modify the following settings unless you know how they work (非必要不要修改)
+font:
+  global-font-size:
+  code-font-size:
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  code-font-family: Monaco, consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+##* Blog 标题字体
+# Font settings for the site title and site subtitle
+# 左上角网站名字 主页居中网站名字
+blog_title_font:
+  font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
+  font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif
+##* 网页副标题
+# 主页subtitle
+subtitle:
+  enable: true # Typewriter Effect (打字效果)
+  effect: true
+  loop: true # loop (循环打字)
+  # source: false 关闭调用第三方服务
+  # source: 1  调用一言网的一句话（简体） https://hitokoto.cn/
+  # source: 2  调用一句网（简体） http://yijuzhan.com/
+  # source: 3  调用今日诗词（简体） https://www.jinrishici.com/
+  # subtitle 会先显示 source , 再显示 sub 的内容
+  # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
+  source: 1
+  sub:
+    - 人从根本上来说是时间性的存在
+    - 欲戴王冠，必承其重
+		- 这个世界如此的美丽，我却从来没有注意到
+		- 不要哀求，学会争取；若是如此，终有所获
+		- ‌宇宙虽有其起源，却没有终结——无限。星球虽也有起源，却因其自身之力走向毁灭——有限。
+		- Kept you waiting, huh?
+		- 未来的事情无人知晓，所以它才如同这重逢一般，拥有着无限的可能性
+		- 在世界中心呼唤爱的野兽
+
+#* 其他配置
+##* Snackbar 弹窗
+# https://github.com/polonel/SnackBar
+# position 弹窗位置
+# 可选 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+snackbar:
+  enable: true
+  position: bottom-left 
+  bg_light: '#49b1f5' #light mode时弹窗背景
+  bg_dark: '#2d3035' #dark mode时弹窗背景
+##* Add the vendor prefixes to ensure compatibility
+css_prefix: true # CSS 前缀
+##* Instantpage 预加载
+instantpage: true # https://instant.page/
+##* Open Graph 在 head 里增加一些 meta 资料，例如缩略图、标题、时间等等
+Open_Graph_meta: true # https://developers.facebook.com/docs/sharing/webmasters/
+##* 中英文之间添加空格
+pangu:
+  enable: false
+  field: post # post(只在文章页生效) / site(全站生效)
+##* Pjax [Beta]
+# 当用户点击链接，通过ajax更新页面需要变化的部分，然后使用HTML5的pushState修改浏览器的URL地址。
+# 这样可以不用重复加载相同的资源（css/js）， 从而提升网页的加载速度。
+pjax: 
+  enable: true
+  exclude:
+    - /music/
+    - /no-pjax/
+##* 生成RSS文件的插件
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+##* 为网站使用到的所有外链添加rel="noopener external nofollow noreferrer"
+# 可以有效地加强网站SEO和防止权重流失
+nofollow:
+  enable: true
+  field: site
+#   exclude:
+#     - 'exclude1.com'
+#     - 'exclude2.com'
+
+#* 侧边栏
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true # 手机页面（ 显示宽度 < 768px ）是否显示aside内容
+  position: right # left or right
+  archives: true
+  card_author:
+    enable: true
+    description:
+    button:
+      enable: true
+	    icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/AmamiyaRenn
+  card_announcement:
+    enable: true
+    content: This is my Blog
+  card_recent_post:
+    enable: true
+    limit: 5 # if set 0 will show all
+    sort: date # date or updated
+  card_categories:
+    enable: true
+    limit: 8 # if set 0 will show all
+    expand: none # none/true/false
+  card_tags:
+    enable: true
+    limit: 40 # if set 0 will show all
+    color: false
+  card_archives:
+    enable: true
+    type: monthly # yearly or monthly
+    format: MMMM YYYY # eg: YYYY年MM月
+    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
+    limit: 8 # if set 0 will show all
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
