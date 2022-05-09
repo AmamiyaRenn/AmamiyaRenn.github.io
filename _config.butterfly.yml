@@ -4,15 +4,18 @@
 #* 插入代码到</head>之前与</body>之前
 inject:
   head:
-#   - <link rel="stylesheet" href="//at.alicdn.com/t/font_3387690_3kpdr5jkp2j.css">
+#   - <link rel="icon" href="//at.alicdn.com/t/font_3387690_3kpdr5jkp2j.css">
   bottom: 
+
+favicon: /img/favicon.ico
 
 #* 头图
 ##* 首页
-index_img: "/img/Xenoblade2 Hikari.jpg" 
+index_img: "/img/Game/Xenoblade2 Hikari.jpg" 
 ##* 默认
-default_top_img: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)" 
-# default_top_img: /img/
+# default_top_img: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)" 
+default_top_img: "img/Game/NieR_Automata.jpg"
+
 
 #* 导航界面
 menu:
@@ -166,7 +169,22 @@ cover:
   position: left
   # 当没有设置cover时，默认的封面显示
   default_cover:
-    - https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
+    # - https://images3.alphacoders.com/749/749909.png
+    - "img/Game/NieR_Automata.jpg"
+    - "img//Game/Xenoblade2 Logo.jpg"
+    - "img/Anime/1.jpg"
+    # - "img/SAO/1.png"
+    - "img/SAO/2.png"
+    - "img/SAO/3.jpg"
+    - "img/SAO/4.png"
+    - "img/SG/1.png"
+    # - "img/SG/2.jpg"
+    - "img/SG/3.jpg"
+    - "img/SG/4.jpg"
+    - "img/SG/5.png"
+    # - "img/SG/6.jpg"
+    - "img/SG/7.jpg"
+    - "img/SG/8.jpg"
 ##* 文章页相关配置
 ###* meta显示
 post_meta:
