@@ -1,5 +1,13 @@
 - class_name: 友情链接
-  class_desc: 网站组成
+  # class_desc: 框架与主题
+  link_list:
+    - name: yurifranxx's Blog
+      link: https://franxxyuri.github.io/
+      avatar: https://franxxyuri.github.io/img/avatar.png
+      descr: 数学爱好者，最喜欢的角色是珂朵莉
+
+- class_name: 网站组成
+  # class_desc: 框架与主题
   link_list:
     - name: Hexo
       link: https://hexo.io/
