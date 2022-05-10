@@ -3,8 +3,7 @@
   <entry>
     <title>GAMES202</title>
     <url>/2022/05/09/GAMES202/</url>
-    <content><![CDATA[<h1>GAMES202 记录</h1>
-<h2 id="踩坑记录">踩坑记录</h2>
+    <content><![CDATA[<h1>踩坑</h1>
 <ol>
 <li>模型渲染不出来
 <ol>
@@ -19,8 +18,8 @@
 </ol>
 </li>
 </ol>
-<h2 id="重难点">重难点</h2>
-<h3 id="ShadowMap">ShadowMap</h3>
+<h1>重难点</h1>
+<h2 id="ShadowMap">ShadowMap</h2>
 <ol>
 <li>硬阴影
 <ol>
@@ -54,28 +53,79 @@
       </tags>
   </entry>
   <entry>
+    <title>VSCode插件推荐</title>
+    <url>/2022/05/10/VSCode%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<a class="btn-beautify blue larger" href="https://code.visualstudio.com/" 
+  title="此处进入 VSCode 官网"><i class="far fa-hand-point-right"></i><span>此处进入 VSCode 官网</span></a>
+<div class="note pink icon simple"><i class="note-icon fas fa-laptop-code"></i><p>VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介绍一些常用的插件以供参考</p>
+</div>
+<h1>美化</h1>
+<div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>编程的技术水平和编辑器的颜值成正比</strong></p>
+</div>
+<p>此处是我美化的结果</p>
+<p><img src="/img/VSCode/Beautify.png" alt="VSCode美化效果"></p>
+<div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-image"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-atom""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-language"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>
+安装完成后按<code>F1</code>输入<code>theme</code>调整颜色主题为<code>One Dark Pro Darker</code>，并在插件的拓展设置中把勾都打上</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-3"><p>背景图插件我只推荐<code>backgound-cover</code></p>
+<div class="note red icon simple"><i class="note-icon fa-solid fa-circle-exclamation"></i><p>如果插件配置好后却没有显示，而且也没出现<code>code 已经损坏</code>的提示，说明你没有用管理员身份打开 VSCode。<br>
+对于<mark class="hl-label blue">Windows</mark> 用户，请执行<code>Visual Studio Code图标 -&gt; 鼠标右键 -&gt; 属性 -&gt; 兼容性 -&gt; 以管理员身份运行此程序打勾</code><br>
+对于<mark class="hl-label orange">Linux</mark> ，请在终端键入<code>sudo chown -R $(whoami) /usr/share/code</code><br>
+想要消除<code>code 已经损坏</code>的提示，可以安装<code>Fix VSCode Checksums</code>插件，或者直接对该提示执行<code>不再显示</code></p>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-4"><p>简约美观的图标——<code>vscode-icons</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-5"><p>括号全白，看的头大，能不能拯救一下？<br>
+能！只需要安装<code>Bracket Pair Colorizer 2</code>，即可享受花花绿绿的括号</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-6"><p><code>Power Mode</code>的配置与效果请看<br>
+<a class="btn-beautify blue purple" href="https://blog.csdn.net/muzilanlan/article/details/81509374" 
+  title="写代码的时候体验狂拽酷炫的效果"><i class="far fa-hand-point-right"></i><span>写代码的时候体验狂拽酷炫的效果</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<hr>
+<h1>Markdown</h1>
+<p>VSCode 的正确运用方式是：写 <code>Markdown</code>！<br>
+那怎么才能有丝滑的<code>Markdown</code>体验呢，请参考下方链接进行配置</p>
+<a class="btn-beautify pink larger" href="https://zhuanlan.zhihu.com/p/442554652" 
+  title="再见 Typora！5 分钟从 Typora 迁移到 VScode！"><i class="far fa-hand-point-right"></i><span>再见 Typora！5 分钟从 Typora 迁移到 VScode！</span></a>
+<p>配置好后该怎么写呢，请参考这一篇</p>
+<a class="btn-beautify pink larger" href="https://zhuanlan.zhihu.com/p/149479119" 
+  title="Markdown学习向整理"><i class="far fa-hand-point-right"></i><span>Markdown学习向整理</span></a>
+<p>同时我推荐<mark class="hl-label green">Markmap</mark> 这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览</p>
+<hr>
+<h1>程序语言</h1>
+<div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>没装程序语言插件支持的 VSCode 和记事本没区别</strong></p>
+</div>
+<div class="tabs" id="programinglanguage"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#programinglanguage-1"><i class="fa-solid fa-c"></i>C/C++</button></li><li class="tab"><button type="button" data-href="#programinglanguage-2"><i class="fab fa-python"></i>Python</button></li><li class="tab"><button type="button" data-href="#programinglanguage-3">Matlab</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="programinglanguage-1"><p>C/C++ 插件请安装<code>C/C++ Extension Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="programinglanguage-2"><p>Python 插件请安装<code>Python</code>和<code>autoDocstring</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="programinglanguage-3"><p>Matlab 插件请安装<code>Matlab Extension Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<hr>
+<h1>提高生产力！</h1>
+<div class="note blue icon simple"><i class="note-icon fa-regular fa-circle-question"></i><p>代码<mark class="hl-label red">写的慢</mark> ，代码<mark class="hl-label red">写不爽</mark> ，代码自己写了<mark class="hl-label red">自己都不想看</mark> 怎么办？<br>
+<strong>好消息！好消息！这是有救的！</strong>，只需要安装如下插件，即可大大加强 VSCode 的生产力</p>
+</div>
+<div class="tabs" id="codeproductivity"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#codeproductivity-1"><i class="fa-brands fa-git-alt"></i>git</button></li><li class="tab"><button type="button" data-href="#codeproductivity-2"><i class="fas fa-marker"></i>Header</button></li><li class="tab"><button type="button" data-href="#codeproductivity-3"><i class="fa-solid fa-bars-staggered"></i>文档格式化</button></li><li class="tab"><button type="button" data-href="#codeproductivity-4"><i class="fa-brands fa-stackpath"></i>路径提示</button></li><li class="tab"><button type="button" data-href="#codeproductivity-5"><i class="fa-solid fa-brain"></i>代码自动补全</button></li><li class="tab"><button type="button" data-href="#codeproductivity-6"><i class="fa-regular fa-circle-check"></i>Todo Tree</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="codeproductivity-1"><p>git 插件请安装<code>Git Extension Pack</code><br>
+有人会问：<mark class="hl-label red">git我不会用怎么办😫</mark><br>
+其实可以去学一学，不是特别难<br>
+如果有空的话我更新这一篇文章或者开一篇新文章，专门讲一讲 git 的基本操作和怎么在 VSCode 中愉快的使用 git</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-2"><p><code>KoroFileHeader</code>可以一键生成头部注释和函数注释，不过需要做一定的配置<br>
+<a class="btn-beautify blue purple" href="https://blog.csdn.net/zhumizhumi/article/details/91446572" 
+  title="VSCode 自动生成文件头部注释和函数注释"><i class="far fa-hand-point-right"></i><span>VSCode 自动生成文件头部注释和函数注释</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-3"><p>文档一键格式化可以使用<code>Prettier</code><br>
+但是这个插件不是对所有的语言都支持，事实上，支持的还蛮少的<br>
+对于<code>Python</code>，可以参考这个文章<br>
+<a class="btn-beautify blue purple" href="https://blog.csdn.net/Pythonlaowan/article/details/99205649" 
+  title="10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮"><i class="far fa-hand-point-right"></i><span>10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-4"><p><code>Path Intellisense</code>可以在键入路径时自动提供提示</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-5"><p>代码中总是有一堆重复，比如变量重复，代码行重复，甚至是代码块重复，能不能让 AI 帮我们忙呢？<br>
+这是可以的，只需要安装<code>Tabnine</code>即可享受</p>
+<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于代码自动补全，目前出了一个还在内测的用嘴自动写代码工具<code>Github Copilot</code>可以关注一下</p>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-6"><p><code>Todo Tree</code>可以在 VSCode 左侧栏提供一个以树形结构显示 Todo 的图标</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<div class="note red icon simple"><i class="note-icon fa-solid fa-face-frown"></i><p>有人会问，明明我已经用了这些插件为什么还会出现如上问题？<br>
+我的评价是：<mark class="hl-label pink">先提高代码水平吧😋</mark></p>
+</div>
+]]></content>
+      <categories>
+        <category>IDE</category>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>技术笔记</tag>
+        <tag>VSCode</tag>
+        <tag>IDE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些细碎知识点的记录</title>
     <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1>记录</h1>
-<h2 id="VSCode">VSCode</h2>
-<h3 id="美化">美化</h3>
-<ol>
-<li>backgound-cover
-<ol>
-<li><code>sudo chown -R $(whoami) /usr/share/code</code></li>
-</ol>
-</li>
-</ol>
-<h3 id="操作">操作</h3>
-<ol>
-<li>函数注释
-<ol>
-<li><code>Ctrl+super+t</code></li>
-</ol>
-</li>
-</ol>
-<h2 id="linux-操作">linux 操作</h2>
-<h3 id="美化-2">美化</h3>
+    <content><![CDATA[<h1>linux 操作</h1>
+<h2 id="美化">美化</h2>
 <ol>
 <li>当 StartupWMClass 为空时，启动应用会出现双图标现象
 <ol>
@@ -87,7 +137,7 @@
 </li>
 <li>对于登录系统的紫色过渡动画，就是输入密码回车，到进入系统这个过程的紫色动画，可以通过 gnome 的扩展 extension 进行屏蔽，名字是 Good Bye GDM3 Login Screen to Desktop Flick for Ubuntu 20.04 only</li>
 </ol>
-<h3 id="系统">系统</h3>
+<h2 id="系统">系统</h2>
 <ol>
 <li>
 <p>重装系统</p>
@@ -180,8 +230,8 @@
 </ol>
 </li>
 </ol>
-<h2 id="C">C++</h2>
-<h3 id="性能调优">性能调优</h3>
+<h1>C++</h1>
+<h2 id="性能调优">性能调优</h2>
 <ol>
 <li>profile
 <ol>
@@ -189,7 +239,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="Matlab">Matlab</h2>
+<h1>Matlab</h1>
 <ol>
 <li>字体过小
 <ol>
@@ -202,8 +252,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>VSCode</tag>
+        <tag>教程</tag>
         <tag>Linux</tag>
         <tag>C/C++</tag>
       </tags>
