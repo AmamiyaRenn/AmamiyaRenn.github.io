@@ -7,14 +7,12 @@ categories:
   - 图形学
   - GAMES202
 description: GAMES202一些笔记与踩坑
-keywords: '图形学, GAMES202'
+keywords: "图形学, GAMES202"
 abbrlink: 40691
 date: 2022-05-09 09:48:19
 ---
 
-# GAMES202 记录
-
-## 踩坑记录
+# 踩坑
 
 1. 模型渲染不出来
    1. git clone three.js
@@ -23,9 +21,9 @@ date: 2022-05-09 09:48:19
    4. 修改 index.html 中`<script src="lib/three.js" defer></script>`
       1. 改为`<script src="lib/three.min.js" defer></script>`
 
-## 重难点
+# 重难点
 
-### ShadowMap
+## ShadowMap
 
 1. 硬阴影
    1. 渲染步骤

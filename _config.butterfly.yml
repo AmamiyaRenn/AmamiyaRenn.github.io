@@ -142,7 +142,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: modern
+  style: simple
   icons: false
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
@@ -418,6 +418,15 @@ nofollow:
 #   exclude:
 #     - 'exclude1.com'
 #     - 'exclude2.com'
+# ##* PWA特性
+# pwa:
+#   enable: true
+#   manifest: /img/pwa/manifest.json
+#   apple_touch_icon: /img/pwa/apple-touch-icon.png
+#   favicon_32_32: /img/pwa/32.png
+#   favicon_16_16: /img/pwa/16.png
+#   mask_icon: /img/pwa/safari-pinned-tab.svg
+
 
 #* 侧边栏
 aside:
@@ -437,7 +446,7 @@ aside:
       link: https://github.com/AmamiyaRenn
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: "交流请加QQ: 379617892"
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all

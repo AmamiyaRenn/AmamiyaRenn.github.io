@@ -1,6 +1,6 @@
 ---
 title: 图形学RoadMap
-sticky: 1
+# sticky: 1
 tags:
   - 图形学
   - RoadMap
