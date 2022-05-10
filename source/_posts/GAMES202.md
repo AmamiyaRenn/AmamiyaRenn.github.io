@@ -10,6 +10,7 @@ description: GAMES202一些笔记与踩坑
 keywords: "图形学, GAMES202"
 abbrlink: 40691
 date: 2022-05-09 09:48:19
+cover: https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/SAO5.jpg
 ---
 
 # 踩坑

@@ -9,11 +9,13 @@ categories:
   - VSCode
 abbrlink: 45037
 date: 2022-05-10 14:40:51
-cover:
+cover: https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/telephone_booth.jpg
 description: 记录了一些可以显著增强VSCode的插件，不得不说VSCode真的非常强大且高颜值，前提是会配置
+keywords: "IDE, VSCode"
 ---
 
-{% btn 'https://code.visualstudio.com/', 此处进入 VSCode 官网,far fa-hand-point-right,blue larger %}
+如果你还没下载 VSCode 的话请
+{% btn 'https://code.visualstudio.com/', 此处进入 VSCode 官网下载VSCode,far fa-hand-point-right,blue larger %}
 
 {% note pink 'fas fa-laptop-code' simple %}
 
@@ -29,7 +31,7 @@ VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介�
 
 此处是我美化的结果
 
-![VSCode美化效果](/img/VSCode/Beautify.png)
+![VSCode美化效果](https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/VSCode_Beautify.png)
 
 {% tabs Beautify %}
 
@@ -39,14 +41,14 @@ VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介�
 
 <!-- endtab -->
 
-<!-- tab 编辑器主题 @fas fa-atom" -->
+<!-- tab 编辑器主题 @fas fa-language" -->
 
 推荐一款美观同时对背景图友好的主题——`One Dark Pro`
 安装完成后按`F1`输入`theme`调整颜色主题为`One Dark Pro Darker`，并在插件的拓展设置中把勾都打上
 
 <!-- endtab -->
 
-<!-- tab 背景图 @fas fa-language -->
+<!-- tab 背景图 @fas fa-atom -->
 
 背景图插件我只推荐`backgound-cover`
 {% note red 'fa-solid fa-circle-exclamation' simple %}
@@ -87,9 +89,11 @@ VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介�
 VSCode 的正确运用方式是：写 `Markdown`！
 那怎么才能有丝滑的`Markdown`体验呢，请参考下方链接进行配置
 {% btn 'https://zhuanlan.zhihu.com/p/442554652', 再见 Typora！5 分钟从 Typora 迁移到 VScode！,far fa-hand-point-right,pink larger %}
-配置好后该怎么写呢，请参考这一篇
+配置好后该怎么写`Markdown`文档呢，请参考这一篇
 {% btn 'https://zhuanlan.zhihu.com/p/149479119', Markdown学习向整理,far fa-hand-point-right,pink larger %}
 同时我推荐{%label Markmap green%}这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览
+更多的操作可以参考
+{% btn 'https://zhuanlan.zhihu.com/p/496083303', 第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈,far fa-hand-point-right,pink larger %}
 
 ---
 

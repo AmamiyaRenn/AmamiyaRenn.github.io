@@ -10,7 +10,7 @@ description: 图形学学习地图
 keywords: "图形学, RoadMap"
 abbrlink: 48997
 date: 2022-05-09 09:53:20
-cover:
+cover: https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/SAO8.jpg
 ---
 
 # 学习路径与资料

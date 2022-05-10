@@ -11,10 +11,10 @@ favicon: /img/favicon.ico
 
 #* 头图
 ##* 首页
-index_img: "/img/Game/Xenoblade2 Hikari.jpg" 
+index_img: https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/Xenoblade2_Hikari.jpg
 ##* 默认
 # default_top_img: "linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)" 
-default_top_img: "img/Game/NieR_Automata.jpg"
+default_top_img: https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/SG5.png
 
 
 #* 导航界面
@@ -169,22 +169,9 @@ cover:
   position: left
   # 当没有设置cover时，默认的封面显示
   default_cover:
-    # - https://images3.alphacoders.com/749/749909.png
-    - "img/Game/NieR_Automata.jpg"
-    - "img//Game/Xenoblade2 Logo.jpg"
-    - "img/Anime/1.jpg"
-    # - "img/SAO/1.png"
-    - "img/SAO/2.png"
-    - "img/SAO/3.jpg"
-    - "img/SAO/4.png"
-    - "img/SG/1.png"
-    # - "img/SG/2.jpg"
-    - "img/SG/3.jpg"
-    - "img/SG/4.jpg"
-    - "img/SG/5.png"
-    # - "img/SG/6.jpg"
-    - "img/SG/7.jpg"
-    - "img/SG/8.jpg"
+    - https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/SG1.png
+    - https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/幽幽子.png
+    - https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/SAO4.png
 ##* 文章页相关配置
 ###* meta显示
 post_meta:
