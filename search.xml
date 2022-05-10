@@ -55,8 +55,9 @@
   <entry>
     <title>VSCode插件推荐</title>
     <url>/2022/05/10/VSCode%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<a class="btn-beautify blue larger" href="https://code.visualstudio.com/" 
-  title="此处进入 VSCode 官网"><i class="far fa-hand-point-right"></i><span>此处进入 VSCode 官网</span></a>
+    <content><![CDATA[<p>如果你还没下载 VSCode 的话请</p>
+<a class="btn-beautify blue larger" href="https://code.visualstudio.com/" 
+  title="此处进入 VSCode 官网下载VSCode"><i class="far fa-hand-point-right"></i><span>此处进入 VSCode 官网下载VSCode</span></a>
 <div class="note pink icon simple"><i class="note-icon fas fa-laptop-code"></i><p>VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介绍一些常用的插件以供参考</p>
 </div>
 <h1>美化</h1>
@@ -64,7 +65,7 @@
 </div>
 <p>此处是我美化的结果</p>
 <p><img src="/img/VSCode/Beautify.png" alt="VSCode美化效果"></p>
-<div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-image"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-atom""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-language"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>
+<div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-image"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-language""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-atom"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>
 安装完成后按<code>F1</code>输入<code>theme</code>调整颜色主题为<code>One Dark Pro Darker</code>，并在插件的拓展设置中把勾都打上</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-3"><p>背景图插件我只推荐<code>backgound-cover</code></p>
 <div class="note red icon simple"><i class="note-icon fa-solid fa-circle-exclamation"></i><p>如果插件配置好后却没有显示，而且也没出现<code>code 已经损坏</code>的提示，说明你没有用管理员身份打开 VSCode。<br>
 对于<mark class="hl-label blue">Windows</mark> 用户，请执行<code>Visual Studio Code图标 -&gt; 鼠标右键 -&gt; 属性 -&gt; 兼容性 -&gt; 以管理员身份运行此程序打勾</code><br>
@@ -80,10 +81,13 @@
 那怎么才能有丝滑的<code>Markdown</code>体验呢，请参考下方链接进行配置</p>
 <a class="btn-beautify pink larger" href="https://zhuanlan.zhihu.com/p/442554652" 
   title="再见 Typora！5 分钟从 Typora 迁移到 VScode！"><i class="far fa-hand-point-right"></i><span>再见 Typora！5 分钟从 Typora 迁移到 VScode！</span></a>
-<p>配置好后该怎么写呢，请参考这一篇</p>
+<p>配置好后该怎么写<code>Markdown</code>文档呢，请参考这一篇</p>
 <a class="btn-beautify pink larger" href="https://zhuanlan.zhihu.com/p/149479119" 
   title="Markdown学习向整理"><i class="far fa-hand-point-right"></i><span>Markdown学习向整理</span></a>
-<p>同时我推荐<mark class="hl-label green">Markmap</mark> 这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览</p>
+<p>同时我推荐<mark class="hl-label green">Markmap</mark> 这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览<br>
+更多的操作可以参考</p>
+<a class="btn-beautify pink larger" href="https://zhuanlan.zhihu.com/p/496083303" 
+  title="第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈"><i class="far fa-hand-point-right"></i><span>第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈</span></a>
 <hr>
 <h1>程序语言</h1>
 <div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>没装程序语言插件支持的 VSCode 和记事本没区别</strong></p>

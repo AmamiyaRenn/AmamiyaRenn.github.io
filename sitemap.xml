@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://amamiyarenn.github.io/2022/05/10/VSCode%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://amamiyarenn.github.io/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2022-05-10</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://amamiyarenn.github.io/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://amamiyarenn.github.io/2022/05/09/GAMES202/</loc>
     
     <lastmod>2022-05-10</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://amamiyarenn.github.io/2022/05/09/GAMES202/</loc>
+    <loc>https://amamiyarenn.github.io/2022/05/10/VSCode%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2022-05-10</lastmod>
     
@@ -153,6 +153,13 @@
   </url>
   
   <url>
+    <loc>https://amamiyarenn.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://amamiyarenn.github.io/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES202/</loc>
     <lastmod>2022-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -161,13 +168,6 @@
   
   <url>
     <loc>https://amamiyarenn.github.io/categories/IDE/VSCode/</loc>
-    <lastmod>2022-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://amamiyarenn.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
