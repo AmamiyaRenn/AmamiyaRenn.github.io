@@ -137,7 +137,7 @@ comments:
 waline:
   serverURL: https://my-blog-comment-jwkb4c24u-amamiyarenn.vercel.app/ # Waline server address url
   bg: # waline background
-  pageview: false # 开启pageview后, 文章页的访问人数將改为Waline提供, 而不是不蒜子
+  pageview: true # 开启pageview后, 文章页的访问人数將改为Waline提供, 而不是不蒜子
   option:
     emoji: ["https://unpkg.com/@waline/emojis@1.0.1/bilibili", 
     "https://unpkg.com/@waline/emojis@1.0.1/tieba",

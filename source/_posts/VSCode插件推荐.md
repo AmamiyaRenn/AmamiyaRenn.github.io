@@ -35,13 +35,13 @@ VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介�
 
 {% tabs Beautify %}
 
-<!-- tab 中文用户界面 @fas fa-image -->
+<!-- tab 中文用户界面 @fas fa-language -->
 
 一键汉化请装`Chinese (Simplified) (简体中文) Language Pack`
 
 <!-- endtab -->
 
-<!-- tab 编辑器主题 @fas fa-language" -->
+<!-- tab 编辑器主题 @fas fa-image" -->
 
 推荐一款美观同时对背景图友好的主题——`One Dark Pro`
 安装完成后按`F1`输入`theme`调整颜色主题为`One Dark Pro Darker`，并在插件的拓展设置中把勾都打上
