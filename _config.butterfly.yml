@@ -33,8 +33,8 @@ menu:
 #* 图标
 ##* 社交网站
 social:
-  # fab fa-github: https://github.com/AmamiyaRenn || Github
   fab fa-bilibili: https://space.bilibili.com/20287832 || Bilibili
+  fas fa-music: https://music.163.com/#/user/home?id=122183293 || NetEaseMusic
   fas fa-envelope: mailto:379617892@qq.com || Email
   fab fa-zhihu: https://www.zhihu.com/people/aprilzhu-yan-can || Zhihu
 
@@ -324,7 +324,7 @@ beautify:
 font:
   global-font-size:
   code-font-size:
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  font-family: -apple-system,Monaco, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
   code-font-family: Monaco, consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 ##* Blog 标题字体
 # Font settings for the site title and site subtitle

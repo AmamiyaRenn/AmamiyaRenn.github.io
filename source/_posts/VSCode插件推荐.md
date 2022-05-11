@@ -80,6 +80,12 @@ VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介�
 
 <!-- endtab -->
 
+<!-- tab Nest效果 @fas fa-circle-nodes-->
+
+`nest`, 为你的 VSCode 加上 nest 效果
+
+<!-- endtab -->
+
 {% endtabs %}
 
 ---
@@ -158,6 +164,12 @@ git 插件请安装`Git Extension Pack`
 但是这个插件不是对所有的语言都支持，事实上，支持的还蛮少的
 对于`Python`，可以参考这个文章
 {% btn 'https://blog.csdn.net/Pythonlaowan/article/details/99205649', 10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮, far fa-hand-point-right,blue purple %}
+
+{% note purple 'fa-solid fa-plus' simple %}
+
+**保存文档时自动格式化**: 按`F1`, 输入`settings`, 打开`VSCode UI settings`, 搜索`Format on save`
+
+{% endnote %}
 
 <!-- endtab -->
 
