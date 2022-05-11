@@ -88,12 +88,12 @@ VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介�
 
 VSCode 的正确运用方式是：写 `Markdown`！
 那怎么才能有丝滑的`Markdown`体验呢，请参考下方链接进行配置
-{% btn 'https://zhuanlan.zhihu.com/p/442554652', 再见 Typora！5 分钟从 Typora 迁移到 VScode！,far fa-hand-point-right,pink larger %}
+{% btn 'https://zhuanlan.zhihu.com/p/442554652', 再见 Typora！5 分钟从 Typora 迁移到 VScode！,far fa-hand-point-right,blue larger %}
 配置好后该怎么写`Markdown`文档呢，请参考这一篇
-{% btn 'https://zhuanlan.zhihu.com/p/149479119', Markdown学习向整理,far fa-hand-point-right,pink larger %}
+{% btn 'https://zhuanlan.zhihu.com/p/149479119', Markdown学习向整理,far fa-hand-point-right,blue larger %}
 同时我推荐{%label Markmap green%}这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览
 更多的操作可以参考
-{% btn 'https://zhuanlan.zhihu.com/p/496083303', 第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈,far fa-hand-point-right,pink larger %}
+{% btn 'https://zhuanlan.zhihu.com/p/496083303', 第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈,far fa-hand-point-right,blue larger %}
 
 ---
 
