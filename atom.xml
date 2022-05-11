@@ -35,9 +35,9 @@
     <category term="VSCode" scheme="https://amamiyarenn.github.io/categories/IDE/VSCode/"/>
     
     
-    <category term="VSCode" scheme="https://amamiyarenn.github.io/tags/VSCode/"/>
-    
     <category term="技术笔记" scheme="https://amamiyarenn.github.io/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="VSCode" scheme="https://amamiyarenn.github.io/tags/VSCode/"/>
     
     <category term="IDE" scheme="https://amamiyarenn.github.io/tags/IDE/"/>
     
@@ -48,7 +48,7 @@
     <link href="https://amamiyarenn.github.io/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/"/>
     <id>https://amamiyarenn.github.io/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</id>
     <published>2022-05-09T01:53:20.000Z</published>
-    <updated>2022-05-10T13:45:20.295Z</updated>
+    <updated>2022-05-10T14:35:04.552Z</updated>
     
     <content type="html"><![CDATA[<h1>学习路径与资料</h1><ol><li>GAMES101<ol><li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li></ol></li><li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li></ol>]]></content>
     
@@ -108,9 +108,9 @@
     <category term="教程" scheme="https://amamiyarenn.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="https://amamiyarenn.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="VSCode" scheme="https://amamiyarenn.github.io/tags/VSCode/"/>
+    
+    <category term="教程" scheme="https://amamiyarenn.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="Linux" scheme="https://amamiyarenn.github.io/tags/Linux/"/>
     
