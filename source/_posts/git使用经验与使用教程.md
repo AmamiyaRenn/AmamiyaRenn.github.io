@@ -8,7 +8,7 @@ categories:
   - 技术笔记
   - git
 cover: "https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/Shojo in Room.jpg"
-description: git 是一个分布式版本控制软件，是你代码的后悔药；git 配合功能强大的 VSCode，简直就是如虎添翼
+description: git是一个分布式版本控制软件，是你代码的后悔药；git配合功能强大的VSCode，简直就是如虎添翼
 keywords: "git, VSCode, 技术笔记"
 abbrlink: 40411
 date: 2022-05-11 10:26:07
