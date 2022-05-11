@@ -65,7 +65,7 @@
 </div>
 <p>此处是我美化的结果</p>
 <p><img src="https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/VSCode_Beautify.png" alt="VSCode美化效果"></p>
-<div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-image"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-language""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-atom"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li><li class="tab"><button type="button" data-href="#beautify-7"><i class="fas fa-circle-nodes"></i>Nest效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>
+<div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-language"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-image""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-atom"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li><li class="tab"><button type="button" data-href="#beautify-7"><i class="fas fa-circle-nodes"></i>Nest效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>
 安装完成后按<code>F1</code>输入<code>theme</code>调整颜色主题为<code>One Dark Pro Darker</code>，并在插件的拓展设置中把勾都打上</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-3"><p>背景图插件我只推荐<code>backgound-cover</code></p>
 <div class="note red icon simple"><i class="note-icon fa-solid fa-circle-exclamation"></i><p>如果插件配置好后却没有显示，而且也没出现<code>code 已经损坏</code>的提示，说明你没有用管理员身份打开 VSCode。<br>
 对于<mark class="hl-label blue">Windows</mark> 用户，请执行<code>Visual Studio Code图标 -&gt; 鼠标右键 -&gt; 属性 -&gt; 兼容性 -&gt; 以管理员身份运行此程序打勾</code><br>
@@ -125,6 +125,52 @@
         <tag>技术笔记</tag>
         <tag>VSCode</tag>
         <tag>IDE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git使用经验与使用教程</title>
+    <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p>
+<h1>如何使用git</h1>
+<h2 id="安装">安装</h2>
+<p>不会还有人没下git吧，不会吧 😥<br>
+如果你是<mark class="hl-label orange">Linux</mark> 系统，直接<code>sudo apt-get install git</code>就可以了<br>
+如果你是<mark class="hl-label blue">Windows</mark> 系统，最简单的下载方式是打开你的 windows terminal 中的 powershell7 通过 winget 安装: <code>winget install -e --id Git.Git</code><br>
+什么你还没有 windows terminal 和 Powershell7? 赶快去 Microsoft Store 下吧</p>
+<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于<code>winget</code>支持的安装，可以查询<a class="btn-beautify blue" href="https://winget.run/" 
+  title="winget.run"><i class="far fa-hand-point-right"></i><span>winget.run</span></a>，同时 winget 如果没有也可以在这里下载安装</p>
+</div>
+<h2 id="使用">使用</h2>
+<p>下文比较全面的介绍了什么是git，如何配置与使用git，如何在IDE（如 Jetbrains系和 VSCode）中使用git</p>
+<a class="btn-beautify blue larger" href="https://www.zhihu.com/question/20866683/answer/2247525158" 
+  title="如何优雅地使用Git？"><i class="far fa-hand-point-right"></i><span>如何优雅地使用Git？</span></a>
+<h2 id="无法链接到github">无法链接到github?</h2>
+<p>有两种办法</p>
+<mark class="hl-label green">办法一</mark> : 不用GitHub, 改用Gitee
+<p>但是明显不靠谱是吧, 毕竟上Github是现代人基本修养</p>
+<mark class="hl-label green">办法二</mark> : 给终端开代理
+<ol>
+<li>首先, 你得有个代理<br>
+先下载<code>clash</code>来挂梯子(我不推荐qv2ray, 因为我没试成功 😥, 且clash 是跨平台的),<a class="btn-beautify blue" href="https://github.com/Fndroid/clash_for_windows_pkg/releases" 
+  title="此处下载clash_for_windows_pkg 发行版"><i class="far fa-hand-point-right"></i><span>此处下载clash_for_windows_pkg 发行版</span></a>, 如果登不上那你需要挂个梯子, 那么问题来了, 本来下 clash 就是为了挂梯子, 现在和我说要先挂梯子才能下clash…我只能说可以上gitee上看看能不能下到, 要么就自己找资源吧<br>
+关于clash的操作我推荐这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/480431059/answer/2240507461" 
+  title="clash下载"><i class="far fa-hand-point-right"></i><span>clash下载</span></a>和这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/432847922/answer/2328447514" 
+  title="请问有没有大神知道Clash for Android URL配置怎么弄啊?"><i class="far fa-hand-point-right"></i><span>请问有没有大神知道Clash for Android URL配置怎么弄啊?</span></a></li>
+<li>然后, 给终端开代理<div class="tabs" id="terminalagent"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#terminalagent-1"><i class="fab fa-linux"></i>Linux</button></li><li class="tab"><button type="button" data-href="#terminalagent-2"><i class="fab fa-windows"></i>Windows</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="terminalagent-1"><p>如果你是<mark class="hl-label orange">Linux</mark> 系统, 则设置中设置手动网络代理-&gt;在http 和 https选项加入 clash 的 port号码, 如7890-&gt;打开你的终端, <code>sudo gedit ~/.bashrc</code>(如果你用zsh则<code>sudo gedit ~/.zshrc</code>(其他的话看你用什么shell))-&gt;末尾写入<code>export http_proxy=&quot;http://localhost:port&quot; </code>和<code>export https_proxy=&quot;https://localhost:port&quot;</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="terminalagent-2"><p>如果你是<mark class="hl-label blue">Windows</mark> 系统, 可以参考这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/YZ930035683/article/details/102075969" 
+  title="给 Windows 的终端配置代理"><i class="far fa-hand-point-right"></i><span>给 Windows 的终端配置代理</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+</li>
+</ol>
+<p>然后你就可以愉快的使用git了!<br>
+如果VSCode的<code>git push</code>功能出现<code>fatal 443链接错误</code>了, 就可以直接在终端中输入指令来<code>push</code></p>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>技术笔记</tag>
+        <tag>VSCode</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -232,52 +278,6 @@
         <tag>教程</tag>
         <tag>Linux</tag>
         <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git使用经验与使用教程</title>
-    <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p>
-<h1>如何使用git</h1>
-<h2 id="安装">安装</h2>
-<p>不会还有人没下git吧，不会吧 😥<br>
-如果你是<mark class="hl-label orange">Linux</mark> 系统，直接<code>sudo apt-get install git</code>就可以了<br>
-如果你是<mark class="hl-label blue">Windows</mark> 系统，最简单的下载方式是打开你的 windows terminal 中的 powershell7 通过 winget 安装: <code>winget install -e --id Git.Git</code><br>
-什么你还没有 windows terminal 和 Powershell7? 赶快去 Microsoft Store 下吧</p>
-<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于<code>winget</code>支持的安装，可以查询<a class="btn-beautify blue" href="https://winget.run/" 
-  title="winget.run"><i class="far fa-hand-point-right"></i><span>winget.run</span></a>，同时 winget 如果没有也可以在这里下载安装</p>
-</div>
-<h2 id="使用">使用</h2>
-<p>下文比较全面的介绍了什么是git，如何配置与使用git，如何在IDE（如 Jetbrains系和 VSCode）中使用git</p>
-<a class="btn-beautify blue larger" href="https://www.zhihu.com/question/20866683/answer/2247525158" 
-  title="如何优雅地使用Git？"><i class="far fa-hand-point-right"></i><span>如何优雅地使用Git？</span></a>
-<h2 id="无法链接到github">无法链接到github?</h2>
-<p>有两种办法</p>
-<mark class="hl-label green">办法一</mark> : 不用GitHub, 改用Gitee
-<p>但是明显不靠谱是吧, 毕竟上Github是现代人基本修养</p>
-<mark class="hl-label green">办法二</mark> : 给终端开代理
-<ol>
-<li>首先, 你得有个代理<br>
-先下载<code>clash</code>来挂梯子(我不推荐qv2ray, 因为我没试成功 😥, 且clash 是跨平台的),<a class="btn-beautify blue" href="https://github.com/Fndroid/clash_for_windows_pkg/releases" 
-  title="此处下载clash_for_windows_pkg 发行版"><i class="far fa-hand-point-right"></i><span>此处下载clash_for_windows_pkg 发行版</span></a>, 如果登不上那你需要挂个梯子, 那么问题来了, 本来下 clash 就是为了挂梯子, 现在和我说要先挂梯子才能下clash…我只能说可以上gitee上看看能不能下到, 要么就自己找资源吧<br>
-关于clash的操作我推荐这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/480431059/answer/2240507461" 
-  title="clash下载"><i class="far fa-hand-point-right"></i><span>clash下载</span></a>和这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/432847922/answer/2328447514" 
-  title="请问有没有大神知道Clash for Android URL配置怎么弄啊?"><i class="far fa-hand-point-right"></i><span>请问有没有大神知道Clash for Android URL配置怎么弄啊?</span></a></li>
-<li>然后, 给终端开代理<div class="tabs" id="terminalagent"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#terminalagent-1"><i class="fab fa-linux"></i>Linux</button></li><li class="tab"><button type="button" data-href="#terminalagent-2"><i class="fab fa-windows"></i>Windows</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="terminalagent-1"><p>如果你是<mark class="hl-label orange">Linux</mark> 系统, 则设置中设置手动网络代理-&gt;在http 和 https选项加入 clash 的 port号码, 如7890-&gt;打开你的终端, <code>sudo gedit ~/.bashrc</code>(如果你用zsh则<code>sudo gedit ~/.zshrc</code>(其他的话看你用什么shell))-&gt;末尾写入<code>export http_proxy=&quot;http://localhost:port&quot; </code>和<code>export https_proxy=&quot;https://localhost:port&quot;</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="terminalagent-2"><p>如果你是<mark class="hl-label blue">Windows</mark> 系统, 可以参考这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/YZ930035683/article/details/102075969" 
-  title="给 Windows 的终端配置代理"><i class="far fa-hand-point-right"></i><span>给 Windows 的终端配置代理</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-</li>
-</ol>
-<p>然后你就可以愉快的使用git了!<br>
-如果VSCode的<code>git push</code>功能出现<code>fatal 443链接错误</code>了, 就可以直接在终端中输入指令来<code>push</code></p>
-]]></content>
-      <categories>
-        <category>技术笔记</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>技术笔记</tag>
-        <tag>VSCode</tag>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
