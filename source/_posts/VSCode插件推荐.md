@@ -126,6 +126,8 @@ Python 插件请安装`Python`和`autoDocstring`
 <!-- tab Matlab -->
 
 Matlab 插件请安装`Matlab Extension Pack`
+关于环境配置看这一篇{% btn 'https://blog.csdn.net/bat67/article/details/78858196', 整理：VSCode配置Matlab环境,far fa-hand-point-right,blue  %}
+
 
 <!-- endtab -->
 
