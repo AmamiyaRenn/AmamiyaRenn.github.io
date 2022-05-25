@@ -328,7 +328,7 @@ beautify:
 # # 图片格式 url(http://xxxxxx.com/xxx.jpg)
 # # 颜色（HEX值/RGB值/顔色单词/渐变色)
 # # 留空 不显示背景
-# background:
+background: url(https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/Xenoblade2_Hikari.jpg)
 ##* 自定义全局字体和字体大小
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
