@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://amamiyarenn.github.io/2022/05/25/C-%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2022-05-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://amamiyarenn.github.io/2022/05/10/VSCode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</loc>
     
     <lastmod>2022-05-13</lastmod>
@@ -83,6 +92,20 @@
 
   
   <url>
+    <loc>https://amamiyarenn.github.io/tags/C-C/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://amamiyarenn.github.io/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://amamiyarenn.github.io/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -91,13 +114,6 @@
   
   <url>
     <loc>https://amamiyarenn.github.io/tags/GAMES202/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://amamiyarenn.github.io/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -118,13 +134,6 @@
   </url>
   
   <url>
-    <loc>https://amamiyarenn.github.io/tags/git/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://amamiyarenn.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -139,7 +148,7 @@
   </url>
   
   <url>
-    <loc>https://amamiyarenn.github.io/tags/C-C/</loc>
+    <loc>https://amamiyarenn.github.io/tags/git/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -153,6 +162,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://amamiyarenn.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://amamiyarenn.github.io/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/</loc>
@@ -169,14 +185,21 @@
   </url>
   
   <url>
-    <loc>https://amamiyarenn.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://amamiyarenn.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://amamiyarenn.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://amamiyarenn.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/C-C/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://amamiyarenn.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
