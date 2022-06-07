@@ -101,52 +101,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git使用经验与使用教程</title>
-    <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p>
-<h1>如何使用git</h1>
-<h2 id="安装">安装</h2>
-<p>不会还有人没下git吧，不会吧 😥<br>
-如果你是<mark class="hl-label orange">Linux</mark> 系统，直接<code>sudo apt-get install git</code>就可以了<br>
-如果你是<mark class="hl-label blue">Windows</mark> 系统，最简单的下载方式是打开你的 windows terminal 中的 powershell7 通过 winget 安装: <code>winget install -e --id Git.Git</code><br>
-什么你还没有 windows terminal 和 Powershell7? 赶快去 Microsoft Store 下吧</p>
-<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于<code>winget</code>支持的安装，可以查询<a class="btn-beautify blue" href="https://winget.run/" 
-  title="winget.run"><i class="far fa-hand-point-right"></i><span>winget.run</span></a>，同时 winget 如果没有也可以在这里下载安装</p>
-</div>
-<h2 id="使用">使用</h2>
-<p>下文比较全面的介绍了什么是git，如何配置与使用git，如何在IDE（如 Jetbrains系和 VSCode）中使用git</p>
-<a class="btn-beautify blue larger" href="https://www.zhihu.com/question/20866683/answer/2247525158" 
-  title="如何优雅地使用Git？"><i class="far fa-hand-point-right"></i><span>如何优雅地使用Git？</span></a>
-<h2 id="无法链接到github">无法链接到github?</h2>
-<p>有两种办法</p>
-<mark class="hl-label green">办法一</mark> : 不用GitHub, 改用Gitee
-<p>但是明显不靠谱是吧, 毕竟上Github是现代人基本修养</p>
-<mark class="hl-label green">办法二</mark> : 给终端开代理
-<ol>
-<li>首先, 你得有个代理<br>
-先下载<code>clash</code>来挂梯子(我不推荐qv2ray, 因为我没试成功 😥, 且clash 是跨平台的),<a class="btn-beautify blue" href="https://github.com/Fndroid/clash_for_windows_pkg/releases" 
-  title="此处下载clash_for_windows_pkg 发行版"><i class="far fa-hand-point-right"></i><span>此处下载clash_for_windows_pkg 发行版</span></a>, 如果登不上那你需要挂个梯子, 那么问题来了, 本来下 clash 就是为了挂梯子, 现在和我说要先挂梯子才能下clash…我只能说可以上gitee上看看能不能下到, 要么就自己找资源吧<br>
-关于clash的操作我推荐这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/480431059/answer/2240507461" 
-  title="clash下载"><i class="far fa-hand-point-right"></i><span>clash下载</span></a>和这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/432847922/answer/2328447514" 
-  title="请问有没有大神知道Clash for Android URL配置怎么弄啊?"><i class="far fa-hand-point-right"></i><span>请问有没有大神知道Clash for Android URL配置怎么弄啊?</span></a></li>
-<li>然后, 给终端开代理<div class="tabs" id="terminalagent"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#terminalagent-1"><i class="fab fa-linux"></i>Linux</button></li><li class="tab"><button type="button" data-href="#terminalagent-2"><i class="fab fa-windows"></i>Windows</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="terminalagent-1"><p>如果你是<mark class="hl-label orange">Linux</mark> 系统, 则设置中设置手动网络代理-&gt;在http 和 https选项加入 clash 的 port号码, 如7890-&gt;打开你的终端, <code>sudo gedit ~/.bashrc</code>(如果你用zsh则<code>sudo gedit ~/.zshrc</code>(其他的话看你用什么shell))-&gt;末尾写入<code>export http_proxy=&quot;http://localhost:port&quot; </code>和<code>export https_proxy=&quot;https://localhost:port&quot;</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="terminalagent-2"><p>如果你是<mark class="hl-label blue">Windows</mark> 系统, 可以参考这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/YZ930035683/article/details/102075969" 
-  title="给 Windows 的终端配置代理"><i class="far fa-hand-point-right"></i><span>给 Windows 的终端配置代理</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-</li>
-</ol>
-<p>然后你就可以愉快的使用git了!<br>
-如果VSCode的<code>git push</code>功能出现<code>fatal 443链接错误</code>了, 就可以直接在终端中输入指令来<code>push</code></p>
-]]></content>
-      <categories>
-        <category>技术笔记</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>技术笔记</tag>
-        <tag>git</tag>
-        <tag>VSCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VSCode插件推荐</title>
     <url>/2022/05/10/VSCode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<p>如果你还没下载 VSCode 的话请</p>
@@ -221,6 +175,52 @@
         <tag>技术笔记</tag>
         <tag>VSCode</tag>
         <tag>IDE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git使用经验与使用教程</title>
+    <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p>
+<h1>如何使用git</h1>
+<h2 id="安装">安装</h2>
+<p>不会还有人没下git吧，不会吧 😥<br>
+如果你是<mark class="hl-label orange">Linux</mark> 系统，直接<code>sudo apt-get install git</code>就可以了<br>
+如果你是<mark class="hl-label blue">Windows</mark> 系统，最简单的下载方式是打开你的 windows terminal 中的 powershell7 通过 winget 安装: <code>winget install -e --id Git.Git</code><br>
+什么你还没有 windows terminal 和 Powershell7? 赶快去 Microsoft Store 下吧</p>
+<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于<code>winget</code>支持的安装，可以查询<a class="btn-beautify blue" href="https://winget.run/" 
+  title="winget.run"><i class="far fa-hand-point-right"></i><span>winget.run</span></a>，同时 winget 如果没有也可以在这里下载安装</p>
+</div>
+<h2 id="使用">使用</h2>
+<p>下文比较全面的介绍了什么是git，如何配置与使用git，如何在IDE（如 Jetbrains系和 VSCode）中使用git</p>
+<a class="btn-beautify blue larger" href="https://www.zhihu.com/question/20866683/answer/2247525158" 
+  title="如何优雅地使用Git？"><i class="far fa-hand-point-right"></i><span>如何优雅地使用Git？</span></a>
+<h2 id="无法链接到github">无法链接到github?</h2>
+<p>有两种办法</p>
+<mark class="hl-label green">办法一</mark> : 不用GitHub, 改用Gitee
+<p>但是明显不靠谱是吧, 毕竟上Github是现代人基本修养</p>
+<mark class="hl-label green">办法二</mark> : 给终端开代理
+<ol>
+<li>首先, 你得有个代理<br>
+先下载<code>clash</code>来挂梯子(我不推荐qv2ray, 因为我没试成功 😥, 且clash 是跨平台的),<a class="btn-beautify blue" href="https://github.com/Fndroid/clash_for_windows_pkg/releases" 
+  title="此处下载clash_for_windows_pkg 发行版"><i class="far fa-hand-point-right"></i><span>此处下载clash_for_windows_pkg 发行版</span></a>, 如果登不上那你需要挂个梯子, 那么问题来了, 本来下 clash 就是为了挂梯子, 现在和我说要先挂梯子才能下clash…我只能说可以上gitee上看看能不能下到, 要么就自己找资源吧<br>
+关于clash的操作我推荐这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/480431059/answer/2240507461" 
+  title="clash下载"><i class="far fa-hand-point-right"></i><span>clash下载</span></a>和这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/432847922/answer/2328447514" 
+  title="请问有没有大神知道Clash for Android URL配置怎么弄啊?"><i class="far fa-hand-point-right"></i><span>请问有没有大神知道Clash for Android URL配置怎么弄啊?</span></a></li>
+<li>然后, 给终端开代理<div class="tabs" id="terminalagent"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#terminalagent-1"><i class="fab fa-linux"></i>Linux</button></li><li class="tab"><button type="button" data-href="#terminalagent-2"><i class="fab fa-windows"></i>Windows</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="terminalagent-1"><p>如果你是<mark class="hl-label orange">Linux</mark> 系统, 则设置中设置手动网络代理-&gt;在http 和 https选项加入 clash 的 port号码, 如7890-&gt;打开你的终端, <code>sudo gedit ~/.bashrc</code>(如果你用zsh则<code>sudo gedit ~/.zshrc</code>(其他的话看你用什么shell))-&gt;末尾写入<code>export http_proxy=&quot;http://localhost:port&quot; </code>和<code>export https_proxy=&quot;https://localhost:port&quot;</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="terminalagent-2"><p>如果你是<mark class="hl-label blue">Windows</mark> 系统, 可以参考这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/YZ930035683/article/details/102075969" 
+  title="给 Windows 的终端配置代理"><i class="far fa-hand-point-right"></i><span>给 Windows 的终端配置代理</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+</li>
+</ol>
+<p>然后你就可以愉快的使用git了!<br>
+如果VSCode的<code>git push</code>功能出现<code>fatal 443链接错误</code>了, 就可以直接在终端中输入指令来<code>push</code></p>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>技术笔记</tag>
+        <tag>VSCode</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -331,6 +331,27 @@
       </tags>
   </entry>
   <entry>
+    <title>图形学RoadMap</title>
+    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
+    <content><![CDATA[<h1>学习路径与资料</h1>
+<ol>
+<li>GAMES101
+<ol>
+<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
+</ol>
+</li>
+<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>图形学</category>
+      </categories>
+      <tags>
+        <tag>图形学</tag>
+        <tag>RoadMap</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>核心知识体系书单与课程</title>
     <url>/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<h1>说明</h1>
@@ -360,7 +381,7 @@
 <p>存在与时间（陈嘉映 译）</p>
 <h2 id="数学">数学</h2>
 <h3 id="微积分">微积分</h3>
-<p>Calculus（Larson Metric 11E）</p>
+<p>Calculus（Larson 11E）</p>
 <h3 id="线性代数">线性代数</h3>
 <p>线性代数及其应用</p>
 <h3 id="概率论与数理统计">概率论与数理统计</h3>
@@ -396,7 +417,7 @@ C 程序设计语言（2E）</p>
 C++语言的设计和演化<br>
 C++ Primer（with 侯捷 lecture）</p>
 <h3 id="离散数学">离散数学</h3>
-<p>Discrete Mathematics with Applications（Author：Susanna Epp Ver：Metric 5E）</p>
+<p>Discrete Mathematics with Applications（Author：Susanna Epp Ver：5E）</p>
 <h3 id="数据结构与算法">数据结构与算法</h3>
 <p>数据结构（C++语言版 with 邓俊辉 lecture）<br>
 算法设计</p>
@@ -418,7 +439,7 @@ Digital Design and Computer Architecture（Ver：RISC-V 2E）：从数电学到�
 <p>编译原理（with CS143 lab）<br>
 编译器设计（2E）</p>
 <h3 id="设计模式">设计模式</h3>
-<p>Design Pattern in Modern C++20</p>
+<p>Head First Design Patterns: Building Extensible and Maintainable Object-Oriented Software（2E）</p>
 <h3 id="计算机图形学">计算机图形学</h3>
 <h3 id="图形学基础">图形学基础</h3>
 <p>Fundamentals of Computer Graphics（5E with GAMES101 &amp; LearnOpenGL 的高级 OpenGL 前的部分)：以 GAMES101 为主进行学习，认真完成课后作业，完成后学 LearnOpenGL 进行回顾，想必这样就能有比较扎实的图形学基础了吧</p>
@@ -437,27 +458,6 @@ Physical Base Rendering （4E）</p>
 ]]></content>
       <tags>
         <tag>书单</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图形学RoadMap</title>
-    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<h1>学习路径与资料</h1>
-<ol>
-<li>GAMES101
-<ol>
-<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
-</ol>
-</li>
-<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>图形学</category>
-      </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>RoadMap</tag>
       </tags>
   </entry>
 </search>
