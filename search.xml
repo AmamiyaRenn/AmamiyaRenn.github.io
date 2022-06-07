@@ -178,6 +178,27 @@
       </tags>
   </entry>
   <entry>
+    <title>图形学RoadMap</title>
+    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
+    <content><![CDATA[<h1>学习路径与资料</h1>
+<ol>
+<li>GAMES101
+<ol>
+<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
+</ol>
+</li>
+<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>图形学</category>
+      </categories>
+      <tags>
+        <tag>图形学</tag>
+        <tag>RoadMap</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git使用经验与使用教程</title>
     <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p>
@@ -331,27 +352,6 @@
       </tags>
   </entry>
   <entry>
-    <title>图形学RoadMap</title>
-    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<h1>学习路径与资料</h1>
-<ol>
-<li>GAMES101
-<ol>
-<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
-</ol>
-</li>
-<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>图形学</category>
-      </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>RoadMap</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>核心知识体系书单与课程</title>
     <url>/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<h1>说明</h1>
@@ -421,7 +421,7 @@ C++ Primer（with 侯捷 lecture）</p>
 <h3 id="数据结构与算法">数据结构与算法</h3>
 <p>数据结构（C++语言版 with 邓俊辉 lecture）<br>
 算法设计</p>
-<h3 id="模拟电路与数字电路">模拟电路与数字电路</h3>
+<h3 id="模拟电路、数字电路与微体系结构">模拟电路、数字电路与微体系结构</h3>
 <p>模拟 CMOS 集成电路设计<br>
 Digital Design and Computer Architecture（Ver：RISC-V 2E）：从数电学到微体系结构，层层递进；学数电时看的，知识点只讲需要的，且连贯性很强（国内有翻译版，推荐 ARM 翻译版，改进了不少错误：《数字设计和计算机体系结构》（Ver：ARM 2E））</p>
 <h3 id="汇编语言">汇编语言</h3>
@@ -444,11 +444,11 @@ Digital Design and Computer Architecture（Ver：RISC-V 2E）：从数电学到�
 <h3 id="图形学基础">图形学基础</h3>
 <p>Fundamentals of Computer Graphics（5E with GAMES101 &amp; LearnOpenGL 的高级 OpenGL 前的部分)：以 GAMES101 为主进行学习，认真完成课后作业，完成后学 LearnOpenGL 进行回顾，想必这样就能有比较扎实的图形学基础了吧</p>
 <h3 id="渲染">渲染</h3>
-<p>全局光照技术（with Ray tracing in one weekend 三部曲）<br>
+<p>全局光照技术（2E with Ray tracing in one weekend 三部曲）<br>
 Real Time Rendering（4E with GAMES202 &amp; LearnOpenGL 的后半部分）<br>
 Physical Base Rendering （4E）</p>
 <h3 id="引擎">引擎</h3>
-<p>游戏引擎架构（with GAMES104）</p>
+<p>游戏引擎架构（2E with GAMES104）</p>
 <h3 id="计算机视觉">计算机视觉</h3>
 <p>Digital Image Processing（3E）</p>
 <h3 id="机器学习">机器学习</h3>
