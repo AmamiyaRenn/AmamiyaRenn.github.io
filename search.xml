@@ -49,6 +49,58 @@
       </tags>
   </entry>
   <entry>
+    <title>GAMES202</title>
+    <url>/2022/05/09/GAMES202/</url>
+    <content><![CDATA[<h1>踩坑</h1>
+<ol>
+<li>模型渲染不出来
+<ol>
+<li>git clone three.js</li>
+<li>把 homework 中的 MTLLoader、OBJLoader、OribitControls 用上面下载的文件进行替代</li>
+<li>把下载的源码中的 three.min.js 放入 lib</li>
+<li>修改 index.html 中<code>&lt;script src=&quot;lib/three.js&quot; defer&gt;&lt;/script&gt;</code>
+<ol>
+<li>改为<code>&lt;script src=&quot;lib/three.min.js&quot; defer&gt;&lt;/script&gt;</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1>重难点</h1>
+<h2 id="ShadowMap">ShadowMap</h2>
+<ol>
+<li>硬阴影
+<ol>
+<li>渲染步骤
+<ol>
+<li>以光源视角渲染场景
+<ol>
+<li>生成 z-buffer，命名为 shadowMap</li>
+</ol>
+</li>
+<li>以相机视角渲染场景
+<ol>
+<li>对于任意一个 fragment（此处简单理解为像素），通过它的世界坐标和光源视角的 MVP 矩阵，可以算出光源视角下的对应的深度 d(shadowMCoord.z)与 z-buffer 的对应 UV 值（shadowCoord.xy）</li>
+<li>通过 shadowCoord.xy 查询对应的 shadowMap 上的深度 s</li>
+<li>如果 d&lt;=s，则可被光源看见，从而不在阴影中</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>图形学</category>
+        <category>GAMES202</category>
+      </categories>
+      <tags>
+        <tag>图形学</tag>
+        <tag>GAMES202</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VSCode插件推荐</title>
     <url>/2022/05/10/VSCode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<p>如果你还没下载 VSCode 的话请</p>
@@ -172,58 +224,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GAMES202</title>
-    <url>/2022/05/09/GAMES202/</url>
-    <content><![CDATA[<h1>踩坑</h1>
-<ol>
-<li>模型渲染不出来
-<ol>
-<li>git clone three.js</li>
-<li>把 homework 中的 MTLLoader、OBJLoader、OribitControls 用上面下载的文件进行替代</li>
-<li>把下载的源码中的 three.min.js 放入 lib</li>
-<li>修改 index.html 中<code>&lt;script src=&quot;lib/three.js&quot; defer&gt;&lt;/script&gt;</code>
-<ol>
-<li>改为<code>&lt;script src=&quot;lib/three.min.js&quot; defer&gt;&lt;/script&gt;</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h1>重难点</h1>
-<h2 id="ShadowMap">ShadowMap</h2>
-<ol>
-<li>硬阴影
-<ol>
-<li>渲染步骤
-<ol>
-<li>以光源视角渲染场景
-<ol>
-<li>生成 z-buffer，命名为 shadowMap</li>
-</ol>
-</li>
-<li>以相机视角渲染场景
-<ol>
-<li>对于任意一个 fragment（此处简单理解为像素），通过它的世界坐标和光源视角的 MVP 矩阵，可以算出光源视角下的对应的深度 d(shadowMCoord.z)与 z-buffer 的对应 UV 值（shadowCoord.xy）</li>
-<li>通过 shadowCoord.xy 查询对应的 shadowMap 上的深度 s</li>
-<li>如果 d&lt;=s，则可被光源看见，从而不在阴影中</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>图形学</category>
-        <category>GAMES202</category>
-      </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>GAMES202</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一些细碎知识点的记录</title>
     <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1>linux 操作</h1>
@@ -331,27 +331,6 @@
       </tags>
   </entry>
   <entry>
-    <title>图形学RoadMap</title>
-    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<h1>学习路径与资料</h1>
-<ol>
-<li>GAMES101
-<ol>
-<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
-</ol>
-</li>
-<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>图形学</category>
-      </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>RoadMap</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>核心知识体系书单与课程</title>
     <url>/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<h1>说明</h1>
@@ -400,7 +379,7 @@
 <h3 id="控制理论">控制理论</h3>
 <p>现代控制工程（Author：Katsuhiko Ogata Ver：5E）</p>
 <h3 id="电机拖动与电力电子技术">电机拖动与电力电子技术</h3>
-<p>电机、拖动及电力系统</p>
+<p>电机、拖动及电力系统（6E）</p>
 <h2 id="计算机科学">计算机科学</h2>
 <h3 id="发展史">发展史</h3>
 <p>浪潮之巅</p>
@@ -436,7 +415,7 @@ C++ Primer（with 侯捷 lecture）</p>
 <p>编译原理（with CS143 lab）<br>
 编译器设计（2E）</p>
 <h3 id="设计模式">设计模式</h3>
-<p>Head First Design Patterns: Building Extensible and Maintainable Object-Oriented Software（2E）</p>
+<p>Head First 设计模式（2E）</p>
 <h2 id="计算机图形学">计算机图形学</h2>
 <h3 id="图形学基础">图形学基础</h3>
 <p>Fundamentals of Computer Graphics（5E with GAMES101 &amp; LearnOpenGL 的高级 OpenGL 前的部分)：以 GAMES101 为主进行学习，认真完成课后作业，完成后学 LearnOpenGL 进行回顾，想必这样就能有比较扎实的图形学基础了吧</p>
@@ -455,6 +434,27 @@ Physical Base Rendering （4E）</p>
 ]]></content>
       <tags>
         <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图形学RoadMap</title>
+    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
+    <content><![CDATA[<h1>学习路径与资料</h1>
+<ol>
+<li>GAMES101
+<ol>
+<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
+</ol>
+</li>
+<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>图形学</category>
+      </categories>
+      <tags>
+        <tag>图形学</tag>
+        <tag>RoadMap</tag>
       </tags>
   </entry>
 </search>
