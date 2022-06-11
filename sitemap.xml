@@ -150,6 +150,13 @@
   </url>
   
   <url>
+    <loc>https://amamiyarenn.github.io/tags/RoadMap/</loc>
+    <lastmod>2022-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://amamiyarenn.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-06-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -158,13 +165,6 @@
   
   <url>
     <loc>https://amamiyarenn.github.io/tags/Linux/</loc>
-    <lastmod>2022-06-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://amamiyarenn.github.io/tags/RoadMap/</loc>
     <lastmod>2022-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
