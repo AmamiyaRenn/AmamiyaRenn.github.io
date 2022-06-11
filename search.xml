@@ -331,6 +331,27 @@
       </tags>
   </entry>
   <entry>
+    <title>图形学RoadMap</title>
+    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
+    <content><![CDATA[<h1>学习路径与资料</h1>
+<ol>
+<li>GAMES101
+<ol>
+<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
+</ol>
+</li>
+<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>图形学</category>
+      </categories>
+      <tags>
+        <tag>图形学</tag>
+        <tag>RoadMap</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>核心知识体系书单与课程</title>
     <url>/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/</url>
     <content><![CDATA[<h1>说明</h1>
@@ -425,7 +446,7 @@ Real Time Rendering（4E with GAMES202 &amp; LearnOpenGL 的后半部分）<br>
 Physical Base Rendering （4E）</p>
 <h3 id="引擎">引擎</h3>
 <p>游戏引擎架构（2E with GAMES104）</p>
-<h3 id="计算机视觉">计算机视觉</h3>
+<h2 id="计算机视觉">计算机视觉</h2>
 <p>Digital Image Processing（3E）</p>
 <h2 id="机器学习">机器学习</h2>
 <p>机器学习实战<br>
@@ -434,27 +455,6 @@ Physical Base Rendering （4E）</p>
 ]]></content>
       <tags>
         <tag>书单</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图形学RoadMap</title>
-    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<h1>学习路径与资料</h1>
-<ol>
-<li>GAMES101
-<ol>
-<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
-</ol>
-</li>
-<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>图形学</category>
-      </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>RoadMap</tag>
       </tags>
   </entry>
 </search>
