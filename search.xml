@@ -1,461 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>C++的内存管理基础</title>
-    <url>/2022/05/25/C-%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1>参考资料</h1>
-<a class="btn-beautify blue larger" href="https://cloud.tencent.com/developer/article/1062982" 
-  title="从4行代码看右值引用"><i class="far fa-hand-point-right"></i><span>从4行代码看右值引用</span></a>
-<a class="btn-beautify blue larger" href="https://blog.csdn.net/qq_30272539/article/details/81390900" 
-  title="函数返回值为引用左值和右值问题"><i class="far fa-hand-point-right"></i><span>函数返回值为引用左值和右值问题</span></a>
-<a class="btn-beautify blue larger" href="https://aprilnavi.github.io/2021/04/26/c++(%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86)/" 
-  title="c++(基础部分)"><i class="far fa-hand-point-right"></i><span>c++(基础部分)</span></a>
-<a class="btn-beautify blue larger" href="https://aprilnavi.github.io/2021/05/06/c++(%E8%BF%9B%E9%98%B6%E9%83%A8%E5%88%86)/" 
-  title="c++(进阶部分)"><i class="far fa-hand-point-right"></i><span>c++(进阶部分)</span></a>
-<a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/150555165" 
-  title="现代 C++：一文读懂智能指针"><i class="far fa-hand-point-right"></i><span>现代 C++：一文读懂智能指针</span></a>
-<h1>指针</h1>
-<p>非严格的讲：<br>
-<strong>内存地址</strong>或叫<strong>地址</strong>，即某表达式或数据存在与计算机存储器中的位置，一个唯一的地址有一个唯一的地址数据如<code>0x2EF0</code><br>
-<strong>左值</strong>(lvalue)即能对表达式取地址的值，例如<code>int i = 10</code>中的<code>i</code>。<br>
-<strong>右值</strong>(rvalue)即不能对表达式取地址的值，例如<code>10</code>,<code>&quot;Hello World!&quot;</code>,<code>0x2EF0</code>，非引用的函数返回值等；当右值出现时，计算机会先开一个对应类型的临时值，当该行码结束时计算机会把右值销毁<br>
-<strong>指针</strong>(pointer)即存储着被指对象的内存地址的左值<br>
-<strong>赋值</strong>(Assignment)定义完成以后再赋值（不管在定义的时候有没有赋值）即赋值<br>
-<strong>初始化</strong>(Initialization)即在定义的同时进行赋值；初始化只能有一次，赋值可以有多次</p>
-<p>此处给出例子</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span>* a = &amp;b;</span><br></pre></td></tr></table></figure>
-<p>第一行通过一个右值<code>10</code>初始化了一个<code>int</code>类型的左值<code>b</code><br>
-第二行通过一个取址符<code>&amp;</code>完成了对左值<code>b</code>的取地址的操作，然后地址值作为右值被赋值给了<code>int*</code>（<code>int</code>类型指针）类型的左值<code>a</code></p>
-<p>考虑这行代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">*a = <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
-<p>这行代码通过<code>*</code>规定<code>*a</code>即为<code>b</code>这个地址中的内容，所以这行代码把<code>5</code>赋值给了<code>b</code><br>
-通过这行代码，<code>b</code>的内容被改为了<code>5</code></p>
-<h1>引用</h1>
-<p><strong>引用</strong>(reference)即对某表达式的别名<br>
-<strong>左值引用</strong>即对能被取地址的表达式的别名<br>
-<strong>右值引用</strong>即对不能被取地址的表达式的别名</p>
-<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>通过右值引用的声明，右值又“重获新生”，其生命周期与右值引用类型变量的生命周期一样长，只要该变量还活着，该右值临时量将会一直存活下去</p>
-</div>
-<hr>
-<p>未完待续</p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>常用快捷键</title>
+      <link href="/2022/06/27/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <url>/2022/06/27/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+      
+        <content type="html"><![CDATA[<h1>Windows</h1><p>保存：Ctrl+S</p><p>全选：Ctrl+A</p><p>切换窗口：Alt+Tab</p><p>窗口移动：Win+↑/↓/←/→</p><h1>VSCode</h1><p>命令面板：F1</p><p>打开文件：F1，然后 Backspace</p><p>关闭文件：Ctrl+W</p><p>撤销：Ctrl+Z</p><p>恢复：Ctrl+Shift+Z</p><p>上/下/左/右移动光标：↑/↓/←/→</p><p>行上/下交换：Alt+↑/↓</p><p>跳转到上/下个光标位置：Alt+←/→</p><p>跳转到词首/尾：Ctrl+←/→</p><p>跳转到行首/尾：Home/End</p><p>跳转到列首/尾：Ctrl+Home/End</p><p>跳转到行：Ctrl+G</p><p>跳转到括号：Ctrl+Shift+\</p><p>跳到定义：F12</p><p>查看定义：Alt+F12</p><p>向上/向下翻页：PageUp/PageDown</p><p>切换到左/右边的文件：Ctrl+PageUp/PageDown</p><p>向右拆分编辑器：Ctrl+\</p><p>行注释：Ctrl+/</p><p>选中：Shift+各种移动/跳转</p><p>复制/粘贴：Ctrl+C/V</p><p>向上/下插入光标：Ctrl+Alt+↑/↓</p><p>在下一个匹配项处插入光标：Ctrl+D</p><p>查找/替换匹配项：Ctrl+F/H</p><p>全局查找/替换匹配项：Ctrl+Shift+F/H</p><p>打开/关闭活动栏：Ctrl+B</p><p>打开/关闭面板：Ctrl+J</p><p>打开/关闭终端：Ctrl+`</p><p>查找活动栏/面板：Ctrl+Q</p>]]></content>
+      
+      
       <categories>
-        <category>程序语言</category>
-        <category>C/C++</category>
+          
+          <category> IDE </category>
+          
+          <category> VSCode </category>
+          
       </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>技术笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GAMES202</title>
-    <url>/2022/05/09/GAMES202/</url>
-    <content><![CDATA[<h1>踩坑</h1>
-<ol>
-<li>模型渲染不出来
-<ol>
-<li>git clone three.js</li>
-<li>把 homework 中的 MTLLoader、OBJLoader、OribitControls 用上面下载的文件进行替代</li>
-<li>把下载的源码中的 three.min.js 放入 lib</li>
-<li>修改 index.html 中<code>&lt;script src=&quot;lib/three.js&quot; defer&gt;&lt;/script&gt;</code>
-<ol>
-<li>改为<code>&lt;script src=&quot;lib/three.min.js&quot; defer&gt;&lt;/script&gt;</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h1>重难点</h1>
-<h2 id="ShadowMap">ShadowMap</h2>
-<ol>
-<li>硬阴影
-<ol>
-<li>渲染步骤
-<ol>
-<li>以光源视角渲染场景
-<ol>
-<li>生成 z-buffer，命名为 shadowMap</li>
-</ol>
-</li>
-<li>以相机视角渲染场景
-<ol>
-<li>对于任意一个 fragment（此处简单理解为像素），通过它的世界坐标和光源视角的 MVP 矩阵，可以算出光源视角下的对应的深度 d(shadowMCoord.z)与 z-buffer 的对应 UV 值（shadowCoord.xy）</li>
-<li>通过 shadowCoord.xy 查询对应的 shadowMap 上的深度 s</li>
-<li>如果 d&lt;=s，则可被光源看见，从而不在阴影中</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> -VSCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>核心知识体系书单与课程</title>
+      <link href="/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/"/>
+      <url>/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1>说明</h1><p>用英文写书名的要求直接阅读原版，有翻译的也建议对照参考，因为英文版印刷清晰且有彩色印刷（还有就是术语的问题）<br>看书不必要完全看完，根据自己的需求阅读；顺序也不必完全遵守，根据自己的需求排序或并行阅读</p><p>TODO：之后有空写一写书评</p><h1>知识</h1><h2 id="哲学">哲学</h2><h3 id="哲学导论">哲学导论</h3><p>大问题：当之无愧的第一哲学导论，逻辑清晰，附有习题</p><h3 id="哲学史">哲学史</h3><p>哲学的历程：看过很多的哲学史，但论适合自学，还得是这本——内容详实，带有现代内容；附有习题</p><h3 id="逻辑学">逻辑学</h3><p>逻辑学导论（根斯勒）：多刷题吧</p><h3 id="德国古典哲学">德国古典哲学</h3><p>纯粹理性批判（邓晓芒 译）：邓晓芒去华科了，可惜，他翻译的康德三大批判是真的经典<br>精神现象学（先刚 译）：翻译的很好，但黑格尔不讲人话<br>小逻辑（梁志学 译）：翻译的很好，但黑格尔不讲人话</p><h3 id="现象学">现象学</h3><p>现象学导论（索科拉夫斯基）：通俗易懂，翻译水平也高<br>胡塞尔现象学</p><h3 id="存在主义">存在主义</h3><p>存在与时间（陈嘉映 译）</p><h2 id="数学">数学</h2><h3 id="微积分">微积分</h3><p>Calculus（Larson 11E）<br>微积分五讲</p><h3 id="线性代数">线性代数</h3><p>线性代数及其应用<br>线性代数五讲</p><h3 id="概率论与数理统计">概率论与数理统计</h3><p>概率论与数理统计（茆诗松 3E）</p><h3 id="复分析">复分析</h3><p>复分析：可视化方法</p><h3 id="信号与系统">信号与系统</h3><p>信号与系统（奥本海姆 2E）：经典永不过时，要是我信号好好看这本书，完成习题，也不会考那么烂了吧</p><h3 id="数值分析">数值分析</h3><p>数值分析（萨奥尔 2E）</p><h3 id="最优化方法">最优化方法</h3><p>最优化：建模，算法与理论：又新又好的国内教材，涉及到大量的机器学习的应用</p><h3 id="数学物理方法">数学物理方法</h3><p>数学物理方法（顾樵）：如果我能认认真真看下来的话，数物方程也不会挂科吧</p><h2 id="物理学">物理学</h2><p>费曼物理学讲义［15 天］</p><h2 id="电控">电控</h2><h3 id="控制理论">控制理论</h3><p>现代控制工程（Author：Katsuhiko Ogata Ver：5E）</p><h3 id="电机拖动与电力电子技术">电机拖动与电力电子技术</h3><p>电机、拖动及电力系统（6E）</p><h2 id="计算机科学">计算机科学</h2><h3 id="发展史">发展史</h3><p>浪潮之巅</p><h3 id="C-语言">C 语言</h3><p>C 语言程序设计：现代方法（2E）（with 洛谷/力扣 C 语言语法题）</p><h3 id="C">C++</h3><p>白话 C++之练功<br>白话 C++之练武<br>C++语言的设计和演化<br>C++ Primer（with 侯捷 lecture）</p><h3 id="离散数学">离散数学</h3><p>Discrete Mathematics with Applications（Author：Susanna Epp Ver：5E）</p><h3 id="数据结构与算法">数据结构与算法</h3><p>数据结构（C++语言版 with 邓俊辉 lecture）<br>算法设计</p><h3 id="电路基础与模拟电路">电路基础与模拟电路</h3><p>模拟和数字电子电路基础</p><h3 id="数字电路与微体系结构">数字电路与微体系结构</h3><p>Digital Design and Computer Architecture（Ver：RISC-V 2E）：从数电学到微体系结构，层层递进；学数电时看的，知识点只讲需要的，且连贯性很强（国内有翻译版，推荐 ARM 翻译版，改进了不少错误：《数字设计和计算机体系结构》（Ver：ARM 2E））<br>汇编语言（4E）［5 天］：国内难得一见的优秀计算机教材，看起来不像是教材，反而像是推理小说；知识讲的非常明白，如果不会一定是自己的问题，只能说不愧是哲学家写的教科书</p><h3 id="计算机组成原理">计算机组成原理</h3><p>Computer Organization and Design：The Hardware/Software Interface（Ver：RISC-V 5E））：国内翻译版推荐《计算机组成与设计》（（Ver：ARM 5E）［10 天］</p><h3 id="计算机体系结构">计算机体系结构</h3><p>深入理解计算机系统（with CSAPP lab）</p><h3 id="数据库系统">数据库系统</h3><p>数据库系统概念（7E）</p><h3 id="操作系统">操作系统</h3><p>Operating System: Three Easy Pieces：有开源中文翻译版，可以配合南大老师蒋炎岩的课程和实验</p><h3 id="计算机网络">计算机网络</h3><p>网络是怎样连接的<br>计算机网络：自顶向下方法（with CS144 lab）</p><h3 id="编译原理">编译原理</h3><p>编译原理（with CS143 lab）<br>编译器设计（2E）</p><h3 id="设计模式">设计模式</h3><p>Head First 设计模式（2E）<br>游戏编程模式</p><h2 id="计算机图形学">计算机图形学</h2><h3 id="图形学基础">图形学基础</h3><p>Fundamentals of Computer Graphics（5E with GAMES101 &amp; LearnOpenGL 的高级 OpenGL 前的部分)：以 GAMES101 为主进行学习，认真完成课后作业，完成后学 LearnOpenGL 进行回顾，想必这样就能有比较扎实的图形学基础了吧</p><h3 id="渲染">渲染</h3><p>全局光照技术（2E with Ray tracing in one weekend 三部曲）<br>Real Time Rendering（4E with GAMES202 &amp; LearnOpenGL 的后半部分）<br>Physical Based Rendering （4E）</p><h3 id="引擎">引擎</h3><p>游戏引擎架构（2E with GAMES104）</p><h2 id="计算机视觉">计算机视觉</h2><p>Digital Image Processing（3E）</p><h2 id="机器学习">机器学习</h2><p>机器学习实战<br>动手学深度学习<br>统计学习方法</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 书单 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++的内存管理基础</title>
+      <link href="/2022/05/25/C-%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/"/>
+      <url>/2022/05/25/C-%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<h1>参考资料</h1><a class="btn-beautify blue larger" href="https://cloud.tencent.com/developer/article/1062982"   title="从4行代码看右值引用"><i class="far fa-hand-point-right"></i><span>从4行代码看右值引用</span></a><a class="btn-beautify blue larger" href="https://blog.csdn.net/qq_30272539/article/details/81390900"   title="函数返回值为引用左值和右值问题"><i class="far fa-hand-point-right"></i><span>函数返回值为引用左值和右值问题</span></a><a class="btn-beautify blue larger" href="https://aprilnavi.github.io/2021/04/26/c++(%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86)/"   title="c++(基础部分)"><i class="far fa-hand-point-right"></i><span>c++(基础部分)</span></a><a class="btn-beautify blue larger" href="https://aprilnavi.github.io/2021/05/06/c++(%E8%BF%9B%E9%98%B6%E9%83%A8%E5%88%86)/"   title="c++(进阶部分)"><i class="far fa-hand-point-right"></i><span>c++(进阶部分)</span></a><a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/150555165"   title="现代 C++：一文读懂智能指针"><i class="far fa-hand-point-right"></i><span>现代 C++：一文读懂智能指针</span></a><h1>指针</h1><p>非严格的讲：<br><strong>内存地址</strong>或叫<strong>地址</strong>，即某表达式或数据存在与计算机存储器中的位置，一个唯一的地址有一个唯一的地址数据如<code>0x2EF0</code><br><strong>左值</strong>(lvalue)即能对表达式取地址的值，例如<code>int i = 10</code>中的<code>i</code>。<br><strong>右值</strong>(rvalue)即不能对表达式取地址的值，例如<code>10</code>,<code>&quot;Hello World!&quot;</code>,<code>0x2EF0</code>，非引用的函数返回值等；当右值出现时，计算机会先开一个对应类型的临时值，当该行码结束时计算机会把右值销毁<br><strong>指针</strong>(pointer)即存储着被指对象的内存地址的左值<br><strong>赋值</strong>(Assignment)定义完成以后再赋值（不管在定义的时候有没有赋值）即赋值<br><strong>初始化</strong>(Initialization)即在定义的同时进行赋值；初始化只能有一次，赋值可以有多次</p><p>此处给出例子</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span>* a = &amp;b;</span><br></pre></td></tr></table></figure><p>第一行通过一个右值<code>10</code>初始化了一个<code>int</code>类型的左值<code>b</code><br>第二行通过一个取址符<code>&amp;</code>完成了对左值<code>b</code>的取地址的操作，然后地址值作为右值被赋值给了<code>int*</code>（<code>int</code>类型指针）类型的左值<code>a</code></p><p>考虑这行代码</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*a = <span class="number">5</span>;</span><br></pre></td></tr></table></figure><p>这行代码通过<code>*</code>规定<code>*a</code>即为<code>b</code>这个地址中的内容，所以这行代码把<code>5</code>赋值给了<code>b</code><br>通过这行代码，<code>b</code>的内容被改为了<code>5</code></p><h1>引用</h1><p><strong>引用</strong>(reference)即对某表达式的别名<br><strong>左值引用</strong>即对能被取地址的表达式的别名<br><strong>右值引用</strong>即对不能被取地址的表达式的别名</p><div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>通过右值引用的声明，右值又“重获新生”，其生命周期与右值引用类型变量的生命周期一样长，只要该变量还活着，该右值临时量将会一直存活下去</p></div><hr><p>未完待续</p>]]></content>
+      
+      
       <categories>
-        <category>图形学</category>
-        <category>GAMES202</category>
+          
+          <category> 程序语言 </category>
+          
+          <category> C/C++ </category>
+          
       </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>GAMES202</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode插件推荐</title>
-    <url>/2022/05/10/VSCode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<p>如果你还没下载 VSCode 的话请</p>
-<a class="btn-beautify blue larger" href="https://code.visualstudio.com/" 
-  title="此处进入 VSCode 官网下载VSCode"><i class="far fa-hand-point-right"></i><span>此处进入 VSCode 官网下载VSCode</span></a>
-<div class="note pink icon simple"><i class="note-icon fas fa-laptop-code"></i><p>VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介绍一些常用的插件以供参考</p>
-</div>
-<h1>美化</h1>
-<div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>编程的技术水平和编辑器的颜值成正比</strong></p>
-</div>
-<p>此处是我美化的结果</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/VSCode_Beautify.png" alt="VSCode美化效果"></p>
-<div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-language"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-image""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-atom"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li><li class="tab"><button type="button" data-href="#beautify-7"><i class="fas fa-circle-nodes"></i>Nest效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>
-安装完成后按<code>F1</code>输入<code>theme</code>调整颜色主题为<code>One Dark Pro Darker</code>，并在插件的拓展设置中把勾都打上</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-3"><p>背景图插件我只推荐<code>backgound-cover</code></p>
-<div class="note red icon simple"><i class="note-icon fa-solid fa-circle-exclamation"></i><p>如果插件配置好后却没有显示，而且也没出现<code>code 已经损坏</code>的提示，说明你没有用管理员身份打开 VSCode。<br>
-对于<mark class="hl-label blue">Windows</mark> 用户，请执行<code>Visual Studio Code图标 -&gt; 鼠标右键 -&gt; 属性 -&gt; 兼容性 -&gt; 以管理员身份运行此程序打勾</code><br>
-对于<mark class="hl-label orange">Linux</mark> ，请在终端键入<code>sudo chown -R $(whoami) /usr/share/code</code><br>
-想要消除<code>code 已经损坏</code>的提示，可以安装<code>Fix VSCode Checksums</code>插件，或者直接对该提示执行<code>不再显示</code></p>
-</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-4"><p>简约美观的图标——<code>vscode-icons</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-5"><p>括号全白，看的头大，能不能拯救一下？<br>
-能！只需要安装<code>Bracket Pair Colorizer 2</code>，即可享受花花绿绿的括号</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-6"><p><code>Power Mode</code>的配置与效果请看<br>
-<a class="btn-beautify blue purple" href="https://blog.csdn.net/muzilanlan/article/details/81509374" 
-  title="写代码的时候体验狂拽酷炫的效果"><i class="far fa-hand-point-right"></i><span>写代码的时候体验狂拽酷炫的效果</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-7"><p><code>nest</code>, 为你的 VSCode 加上 nest 效果</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-<hr>
-<h1>Markdown</h1>
-<p>VSCode 的正确运用方式是：写 <code>Markdown</code>！<br>
-那怎么才能有丝滑的<code>Markdown</code>体验呢，请参考下方链接进行配置</p>
-<a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/442554652" 
-  title="再见 Typora！5 分钟从 Typora 迁移到 VScode！"><i class="far fa-hand-point-right"></i><span>再见 Typora！5 分钟从 Typora 迁移到 VScode！</span></a>
-<p>配置好后该怎么写<code>Markdown</code>文档呢，请参考这一篇</p>
-<a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/149479119" 
-  title="Markdown学习向整理"><i class="far fa-hand-point-right"></i><span>Markdown学习向整理</span></a>
-<p>同时我推荐<mark class="hl-label green">Markmap</mark> 这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览<br>
-更多的操作可以参考</p>
-<a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/496083303" 
-  title="第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈"><i class="far fa-hand-point-right"></i><span>第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈</span></a>
-<hr>
-<h1>程序语言</h1>
-<div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>没装程序语言插件支持的 VSCode 和记事本没区别</strong></p>
-</div>
-<div class="tabs" id="programinglanguage"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#programinglanguage-1"><i class="fa-solid fa-c"></i>C/C++</button></li><li class="tab"><button type="button" data-href="#programinglanguage-2"><i class="fab fa-python"></i>Python</button></li><li class="tab"><button type="button" data-href="#programinglanguage-3">Matlab</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="programinglanguage-1"><p>C/C++ 插件请安装<code>C/C++ Extension Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="programinglanguage-2"><p>Python 插件请安装<code>Python</code>和<code>autoDocstring</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="programinglanguage-3"><p>Matlab 插件请安装<code>Matlab Extension Pack</code><br>
-关于环境配置看这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/bat67/article/details/78858196" 
-  title="整理：VSCode配置Matlab环境"><i class="far fa-hand-point-right"></i><span>整理：VSCode配置Matlab环境</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-<hr>
-<h1>提高生产力！</h1>
-<div class="note blue icon simple"><i class="note-icon fa-regular fa-circle-question"></i><p>代码<mark class="hl-label red">写的慢</mark> ，代码<mark class="hl-label red">写不爽</mark> ，代码自己写了<mark class="hl-label red">自己都不想看</mark> 怎么办？<br>
-<strong>好消息！好消息！这是有救的！</strong>，只需要安装如下插件，即可大大加强 VSCode 的生产力</p>
-</div>
-<div class="tabs" id="codeproductivity"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#codeproductivity-1"><i class="fa-brands fa-git-alt"></i>git</button></li><li class="tab"><button type="button" data-href="#codeproductivity-2"><i class="fas fa-marker"></i>Header</button></li><li class="tab"><button type="button" data-href="#codeproductivity-3"><i class="fa-solid fa-bars-staggered"></i>文档格式化</button></li><li class="tab"><button type="button" data-href="#codeproductivity-4"><i class="fa-brands fa-stackpath"></i>路径提示</button></li><li class="tab"><button type="button" data-href="#codeproductivity-5"><i class="fa-solid fa-brain"></i>代码自动补全</button></li><li class="tab"><button type="button" data-href="#codeproductivity-6"><i class="fa-regular fa-circle-check"></i>Todo Tree</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="codeproductivity-1"><p>git 插件请安装<code>Git Extension Pack</code><br>
-有人会问：<mark class="hl-label red">git我不会用怎么办😫</mark><br>
-其实可以去学一学，不是特别难<br>
-如果有空的话我更新这一篇文章或者开一篇新文章，专门讲一讲 git 的基本操作和怎么在 VSCode 中愉快的使用 git</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-2"><p><code>KoroFileHeader</code>可以一键生成头部注释和函数注释，不过需要做一定的配置<br>
-<a class="btn-beautify blue purple" href="https://blog.csdn.net/zhumizhumi/article/details/91446572" 
-  title="VSCode 自动生成文件头部注释和函数注释"><i class="far fa-hand-point-right"></i><span>VSCode 自动生成文件头部注释和函数注释</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-3"><p>文档一键格式化可以使用<code>Prettier</code><br>
-但是这个插件不是对所有的语言都支持，事实上，支持的还蛮少的<br>
-对于<code>Python</code>，可以参考这个文章<br>
-<a class="btn-beautify blue purple" href="https://blog.csdn.net/Pythonlaowan/article/details/99205649" 
-  title="10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮"><i class="far fa-hand-point-right"></i><span>10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮</span></a></p>
-<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p><strong>保存文档时自动格式化</strong>: 按<code>F1</code>, 输入<code>settings</code>, 打开<code>VSCode UI settings</code>, 搜索<code>Format on save</code></p>
-</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-4"><p><code>Path Intellisense</code>可以在键入路径时自动提供提示</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-5"><p>代码中总是有一堆重复，比如变量重复，代码行重复，甚至是代码块重复，能不能让 AI 帮我们忙呢？<br>
-这是可以的，只需要安装<code>Tabnine</code>即可享受</p>
-<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于代码自动补全，目前出了一个还在内测的用嘴自动写代码工具<code>Github Copilot</code>可以关注一下</p>
-</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-6"><p><code>Todo Tree</code>可以在 VSCode 左侧栏提供一个以树形结构显示 Todo 的图标</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-<div class="note red icon simple"><i class="note-icon fa-solid fa-face-frown"></i><p>有人会问，明明我已经用了这些插件为什么还会出现如上问题？<br>
-我的评价是：<mark class="hl-label pink">先提高代码水平吧😋</mark></p>
-</div>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 技术笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git使用经验与使用教程</title>
+      <link href="/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p><h1>如何使用git</h1><h2 id="安装">安装</h2><p>不会还有人没下git吧，不会吧 😥<br>如果你是<mark class="hl-label orange">Linux</mark> 系统，直接<code>sudo apt-get install git</code>就可以了<br>如果你是<mark class="hl-label blue">Windows</mark> 系统，最简单的下载方式是打开你的 windows terminal 中的 powershell7 通过 winget 安装: <code>winget install -e --id Git.Git</code><br>什么你还没有 windows terminal 和 Powershell7? 赶快去 Microsoft Store 下吧</p><div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于<code>winget</code>支持的安装，可以查询<a class="btn-beautify blue" href="https://winget.run/"   title="winget.run"><i class="far fa-hand-point-right"></i><span>winget.run</span></a>，同时 winget 如果没有也可以在这里下载安装</p></div><h2 id="使用">使用</h2><p>下文比较全面的介绍了什么是git，如何配置与使用git，如何在IDE（如 Jetbrains系和 VSCode）中使用git</p><a class="btn-beautify blue larger" href="https://www.zhihu.com/question/20866683/answer/2247525158"   title="如何优雅地使用Git？"><i class="far fa-hand-point-right"></i><span>如何优雅地使用Git？</span></a><h2 id="无法链接到github">无法链接到github?</h2><p>有两种办法</p><mark class="hl-label green">办法一</mark> : 不用GitHub, 改用Gitee<p>但是明显不靠谱是吧, 毕竟上Github是现代人基本修养</p><mark class="hl-label green">办法二</mark> : 给终端开代理<ol><li>首先, 你得有个代理<br>先下载<code>clash</code>来挂梯子(我不推荐qv2ray, 因为我没试成功 😥, 且clash 是跨平台的),<a class="btn-beautify blue" href="https://github.com/Fndroid/clash_for_windows_pkg/releases"   title="此处下载clash_for_windows_pkg 发行版"><i class="far fa-hand-point-right"></i><span>此处下载clash_for_windows_pkg 发行版</span></a>, 如果登不上那你需要挂个梯子, 那么问题来了, 本来下 clash 就是为了挂梯子, 现在和我说要先挂梯子才能下clash…我只能说可以上gitee上看看能不能下到, 要么就自己找资源吧<br>关于clash的操作我推荐这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/480431059/answer/2240507461"   title="clash下载"><i class="far fa-hand-point-right"></i><span>clash下载</span></a>和这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/432847922/answer/2328447514"   title="请问有没有大神知道Clash for Android URL配置怎么弄啊?"><i class="far fa-hand-point-right"></i><span>请问有没有大神知道Clash for Android URL配置怎么弄啊?</span></a></li><li>然后, 给终端开代理<div class="tabs" id="terminalagent"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#terminalagent-1"><i class="fab fa-linux"></i>Linux</button></li><li class="tab"><button type="button" data-href="#terminalagent-2"><i class="fab fa-windows"></i>Windows</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="terminalagent-1"><p>如果你是<mark class="hl-label orange">Linux</mark> 系统, 则设置中设置手动网络代理-&gt;在http 和 https选项加入 clash 的 port号码, 如7890-&gt;打开你的终端, <code>sudo gedit ~/.bashrc</code>(如果你用zsh则<code>sudo gedit ~/.zshrc</code>(其他的话看你用什么shell))-&gt;末尾写入<code>export http_proxy=&quot;http://localhost:port&quot; </code>和<code>export https_proxy=&quot;https://localhost:port&quot;</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="terminalagent-2"><p>如果你是<mark class="hl-label blue">Windows</mark> 系统, 可以参考这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/YZ930035683/article/details/102075969"   title="给 Windows 的终端配置代理"><i class="far fa-hand-point-right"></i><span>给 Windows 的终端配置代理</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div></li></ol><p>然后你就可以愉快的使用git了!<br>如果VSCode的<code>git push</code>功能出现<code>fatal 443链接错误</code>了, 就可以直接在终端中输入指令来<code>push</code></p>]]></content>
+      
+      
       <categories>
-        <category>IDE</category>
-        <category>VSCode</category>
+          
+          <category> 技术笔记 </category>
+          
+          <category> git </category>
+          
       </categories>
-      <tags>
-        <tag>技术笔记</tag>
-        <tag>VSCode</tag>
-        <tag>IDE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些细碎知识点的记录</title>
-    <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1>linux 操作</h1>
-<h2 id="美化">美化</h2>
-<ol>
-<li>当 StartupWMClass 为空时，启动应用会出现双图标现象
-<ol>
-<li>终端输入：xprop |grep WM_CLASS，此时鼠标指针会变成一个十字准心，然后点击一下正在运行的软件，终端会反馈一条信息，包括 2 个字符串</li>
-<li>如果没有的话可以使用 Alt+CapsLock 切换多任务的时候查看进程名字。<br>
-把第 1 个（也可能是第 2 个）字符串里的内容添加到 StartupWMClass 里，保存，关闭应用重<br>
-新打开</li>
-</ol>
-</li>
-<li>对于登录系统的紫色过渡动画，就是输入密码回车，到进入系统这个过程的紫色动画，可以通过 gnome 的扩展 extension 进行屏蔽，名字是 Good Bye GDM3 Login Screen to Desktop Flick for Ubuntu 20.04 only</li>
-</ol>
-<h2 id="系统">系统</h2>
-<ol>
-<li>
-<p>重装系统</p>
-<ol>
-<li>重装 windows 后要
-<ol>
-<li>把 ubuntu 顺位调高</li>
-<li>在 shell 中输入
-<ol>
-<li><code>sudo update-grub2</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<p>git</p>
-<ol>
-<li>tag
-<ol>
-<li>查看标签
-<ol>
-<li><code>git tag </code></li>
-</ol>
-</li>
-<li>查看对应标签状态
-<ol>
-<li><code>git checkout 1.0.0</code></li>
-</ol>
-</li>
-<li>创建带备注标签
-<ol>
-<li><code>git tag -a 1.0.0 -m &quot;这是备注信息&quot;</code></li>
-</ol>
-</li>
-<li>删除标签(本地)
-<ol>
-<li><code>git tag -d 1.0.0</code></li>
-</ol>
-</li>
-<li>将本地标签发布到远程仓库（所有）
-<ol>
-<li><code>git push origin --tags</code></li>
-</ol>
-</li>
-<li>将本地标签发布到远程仓库（指定版本）
-<ol>
-<li><code>git push origin 1.0.0</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<p>解压乱码</p>
-<ol>
-<li><code>unzip -O GBK xxx.zip</code> (用 CP936, GB18030 也可以)</li>
-</ol>
-</li>
-</ol>
-<h1>C++</h1>
-<h2 id="性能调优">性能调优</h2>
-<ol>
-<li>profile
-<ol>
-<li>使用 gprof</li>
-</ol>
-</li>
-</ol>
-<h1>Matlab</h1>
-<ol>
-<li>字体过小
-<ol>
-<li><a href="https://liupei.ink/index.php/2021/02/16/linux%E4%B8%8Bmatlab%E5%AD%97%E4%BD%93%E8%BF%87%E5%B0%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">linux 下 matlab 字体过小解决方法</a></li>
-</ol>
-</li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 技术笔记 </tag>
+            
+            <tag> VSCode </tag>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VSCode插件推荐</title>
+      <link href="/2022/05/10/VSCode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+      <url>/2022/05/10/VSCode%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+      
+        <content type="html"><![CDATA[<p>如果你还没下载 VSCode 的话请</p><a class="btn-beautify blue larger" href="https://code.visualstudio.com/"   title="此处进入 VSCode 官网下载VSCode"><i class="far fa-hand-point-right"></i><span>此处进入 VSCode 官网下载VSCode</span></a><div class="note pink icon simple"><i class="note-icon fas fa-laptop-code"></i><p>VSCode 的灵魂当然就是众多的功能强大的插件了，下面我会介绍一些常用的插件以供参考</p></div><h1>美化</h1><div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>编程的技术水平和编辑器的颜值成正比</strong></p></div><p>此处是我美化的结果</p><p><img src="https://cdn.jsdelivr.net/gh/AmamiyaRenn/cloudimg@master/VSCode_Beautify.png" alt="VSCode美化效果"></p><div class="tabs" id="beautify"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#beautify-1"><i class="fas fa-language"></i>中文用户界面</button></li><li class="tab"><button type="button" data-href="#beautify-2"><i class="fas fa-image""></i>编辑器主题</button></li><li class="tab"><button type="button" data-href="#beautify-3"><i class="fas fa-atom"></i>背景图</button></li><li class="tab"><button type="button" data-href="#beautify-4"><i class="fas fa-icons"></i>文件图标</button></li><li class="tab"><button type="button" data-href="#beautify-5"><i class="fas fa-chevron-left"></i>代码括号</button></li><li class="tab"><button type="button" data-href="#beautify-6"><i class="fas fa-bolt"></i>输入时粒子效果</button></li><li class="tab"><button type="button" data-href="#beautify-7"><i class="fas fa-circle-nodes"></i>Nest效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="beautify-1"><p>一键汉化请装<code>Chinese (Simplified) (简体中文) Language Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-2"><p>推荐一款美观同时对背景图友好的主题——<code>One Dark Pro</code><br>安装完成后按<code>F1</code>输入<code>theme</code>调整颜色主题为<code>One Dark Pro Darker</code>，并在插件的拓展设置中把勾都打上</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-3"><p>背景图插件我只推荐<code>backgound-cover</code></p><div class="note red icon simple"><i class="note-icon fa-solid fa-circle-exclamation"></i><p>如果插件配置好后却没有显示，而且也没出现<code>code 已经损坏</code>的提示，说明你没有用管理员身份打开 VSCode。<br>对于<mark class="hl-label blue">Windows</mark> 用户，请执行<code>Visual Studio Code图标 -&gt; 鼠标右键 -&gt; 属性 -&gt; 兼容性 -&gt; 以管理员身份运行此程序打勾</code><br>对于<mark class="hl-label orange">Linux</mark> ，请在终端键入<code>sudo chown -R $(whoami) /usr/share/code</code><br>想要消除<code>code 已经损坏</code>的提示，可以安装<code>Fix VSCode Checksums</code>插件，或者直接对该提示执行<code>不再显示</code></p></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-4"><p>简约美观的图标——<code>vscode-icons</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-5"><p>括号全白，看的头大，能不能拯救一下？<br>能！只需要安装<code>Bracket Pair Colorizer 2</code>，即可享受花花绿绿的括号</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-6"><p><code>Power Mode</code>的配置与效果请看<br><a class="btn-beautify blue purple" href="https://blog.csdn.net/muzilanlan/article/details/81509374"   title="写代码的时候体验狂拽酷炫的效果"><i class="far fa-hand-point-right"></i><span>写代码的时候体验狂拽酷炫的效果</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="beautify-7"><p><code>nest</code>, 为你的 VSCode 加上 nest 效果</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><hr><h1>Markdown</h1><p>VSCode 的正确运用方式是：写 <code>Markdown</code>！<br>那怎么才能有丝滑的<code>Markdown</code>体验呢，请参考下方链接进行配置</p><a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/442554652"   title="再见 Typora！5 分钟从 Typora 迁移到 VScode！"><i class="far fa-hand-point-right"></i><span>再见 Typora！5 分钟从 Typora 迁移到 VScode！</span></a><p>配置好后该怎么写<code>Markdown</code>文档呢，请参考这一篇</p><a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/149479119"   title="Markdown学习向整理"><i class="far fa-hand-point-right"></i><span>Markdown学习向整理</span></a><p>同时我推荐<mark class="hl-label green">Markmap</mark> 这个插件，它可以从你的 markdown 文件自动生成对应思维导图形式的预览<br>更多的操作可以参考</p><a class="btn-beautify blue larger" href="https://zhuanlan.zhihu.com/p/496083303"   title="第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈"><i class="far fa-hand-point-right"></i><span>第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈</span></a><hr><h1>程序语言</h1><div class="note blue icon simple"><i class="note-icon fas fa-bullhorn"></i><p>众所周知，<strong>没装程序语言插件支持的 VSCode 和记事本没区别</strong></p></div><div class="tabs" id="programinglanguage"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#programinglanguage-1"><i class="fa-solid fa-c"></i>C/C++</button></li><li class="tab"><button type="button" data-href="#programinglanguage-2"><i class="fab fa-python"></i>Python</button></li><li class="tab"><button type="button" data-href="#programinglanguage-3">Matlab</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="programinglanguage-1"><p>C/C++ 插件请安装<code>C/C++ Extension Pack</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="programinglanguage-2"><p>Python 插件请安装<code>Python</code>和<code>autoDocstring</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="programinglanguage-3"><p>Matlab 插件请安装<code>Matlab Extension Pack</code><br>关于环境配置看这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/bat67/article/details/78858196"   title="整理：VSCode配置Matlab环境"><i class="far fa-hand-point-right"></i><span>整理：VSCode配置Matlab环境</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><hr><h1>提高生产力！</h1><div class="note blue icon simple"><i class="note-icon fa-regular fa-circle-question"></i><p>代码<mark class="hl-label red">写的慢</mark> ，代码<mark class="hl-label red">写不爽</mark> ，代码自己写了<mark class="hl-label red">自己都不想看</mark> 怎么办？<br><strong>好消息！好消息！这是有救的！</strong>，只需要安装如下插件，即可大大加强 VSCode 的生产力</p></div><div class="tabs" id="codeproductivity"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#codeproductivity-1"><i class="fa-brands fa-git-alt"></i>git</button></li><li class="tab"><button type="button" data-href="#codeproductivity-2"><i class="fas fa-marker"></i>Header</button></li><li class="tab"><button type="button" data-href="#codeproductivity-3"><i class="fa-solid fa-bars-staggered"></i>文档格式化</button></li><li class="tab"><button type="button" data-href="#codeproductivity-4"><i class="fa-brands fa-stackpath"></i>路径提示</button></li><li class="tab"><button type="button" data-href="#codeproductivity-5"><i class="fa-solid fa-brain"></i>代码自动补全</button></li><li class="tab"><button type="button" data-href="#codeproductivity-6"><i class="fa-regular fa-circle-check"></i>Todo Tree</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="codeproductivity-1"><p>git 插件请安装<code>Git Extension Pack</code><br>有人会问：<mark class="hl-label red">git我不会用怎么办😫</mark><br>其实可以去学一学，不是特别难<br>如果有空的话我更新这一篇文章或者开一篇新文章，专门讲一讲 git 的基本操作和怎么在 VSCode 中愉快的使用 git</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-2"><p><code>KoroFileHeader</code>可以一键生成头部注释和函数注释，不过需要做一定的配置<br><a class="btn-beautify blue purple" href="https://blog.csdn.net/zhumizhumi/article/details/91446572"   title="VSCode 自动生成文件头部注释和函数注释"><i class="far fa-hand-point-right"></i><span>VSCode 自动生成文件头部注释和函数注释</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-3"><p>文档一键格式化可以使用<code>Prettier</code><br>但是这个插件不是对所有的语言都支持，事实上，支持的还蛮少的<br>对于<code>Python</code>，可以参考这个文章<br><a class="btn-beautify blue purple" href="https://blog.csdn.net/Pythonlaowan/article/details/99205649"   title="10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮"><i class="far fa-hand-point-right"></i><span>10分钟教你用YAPF让Python代码瞬间从丑陋变漂亮</span></a></p><div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p><strong>保存文档时自动格式化</strong>: 按<code>F1</code>, 输入<code>settings</code>, 打开<code>VSCode UI settings</code>, 搜索<code>Format on save</code></p></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-4"><p><code>Path Intellisense</code>可以在键入路径时自动提供提示</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-5"><p>代码中总是有一堆重复，比如变量重复，代码行重复，甚至是代码块重复，能不能让 AI 帮我们忙呢？<br>这是可以的，只需要安装<code>Tabnine</code>即可享受</p><div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于代码自动补全，目前出了一个还在内测的用嘴自动写代码工具<code>Github Copilot</code>可以关注一下</p></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="codeproductivity-6"><p><code>Todo Tree</code>可以在 VSCode 左侧栏提供一个以树形结构显示 Todo 的图标</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><div class="note red icon simple"><i class="note-icon fa-solid fa-face-frown"></i><p>有人会问，明明我已经用了这些插件为什么还会出现如上问题？<br>我的评价是：<mark class="hl-label pink">先提高代码水平吧😋</mark></p></div>]]></content>
+      
+      
       <categories>
-        <category>教程</category>
+          
+          <category> IDE </category>
+          
+          <category> VSCode </category>
+          
       </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>VSCode</tag>
-        <tag>教程</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git使用经验与使用教程</title>
-    <url>/2022/05/11/git%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>互联网逛多了，深感真正有切实操作价值的教程挺少，很大部分都是 copy 他人文章还不标注转载，所以在本文我会把一些真正帮到我的文章列出，并附上一些我个人的经验</p>
-<h1>如何使用git</h1>
-<h2 id="安装">安装</h2>
-<p>不会还有人没下git吧，不会吧 😥<br>
-如果你是<mark class="hl-label orange">Linux</mark> 系统，直接<code>sudo apt-get install git</code>就可以了<br>
-如果你是<mark class="hl-label blue">Windows</mark> 系统，最简单的下载方式是打开你的 windows terminal 中的 powershell7 通过 winget 安装: <code>winget install -e --id Git.Git</code><br>
-什么你还没有 windows terminal 和 Powershell7? 赶快去 Microsoft Store 下吧</p>
-<div class="note purple icon simple"><i class="note-icon fa-solid fa-plus"></i><p>关于<code>winget</code>支持的安装，可以查询<a class="btn-beautify blue" href="https://winget.run/" 
-  title="winget.run"><i class="far fa-hand-point-right"></i><span>winget.run</span></a>，同时 winget 如果没有也可以在这里下载安装</p>
-</div>
-<h2 id="使用">使用</h2>
-<p>下文比较全面的介绍了什么是git，如何配置与使用git，如何在IDE（如 Jetbrains系和 VSCode）中使用git</p>
-<a class="btn-beautify blue larger" href="https://www.zhihu.com/question/20866683/answer/2247525158" 
-  title="如何优雅地使用Git？"><i class="far fa-hand-point-right"></i><span>如何优雅地使用Git？</span></a>
-<h2 id="无法链接到github">无法链接到github?</h2>
-<p>有两种办法</p>
-<mark class="hl-label green">办法一</mark> : 不用GitHub, 改用Gitee
-<p>但是明显不靠谱是吧, 毕竟上Github是现代人基本修养</p>
-<mark class="hl-label green">办法二</mark> : 给终端开代理
-<ol>
-<li>首先, 你得有个代理<br>
-先下载<code>clash</code>来挂梯子(我不推荐qv2ray, 因为我没试成功 😥, 且clash 是跨平台的),<a class="btn-beautify blue" href="https://github.com/Fndroid/clash_for_windows_pkg/releases" 
-  title="此处下载clash_for_windows_pkg 发行版"><i class="far fa-hand-point-right"></i><span>此处下载clash_for_windows_pkg 发行版</span></a>, 如果登不上那你需要挂个梯子, 那么问题来了, 本来下 clash 就是为了挂梯子, 现在和我说要先挂梯子才能下clash…我只能说可以上gitee上看看能不能下到, 要么就自己找资源吧<br>
-关于clash的操作我推荐这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/480431059/answer/2240507461" 
-  title="clash下载"><i class="far fa-hand-point-right"></i><span>clash下载</span></a>和这个回答<a class="btn-beautify blue" href="https://www.zhihu.com/question/432847922/answer/2328447514" 
-  title="请问有没有大神知道Clash for Android URL配置怎么弄啊?"><i class="far fa-hand-point-right"></i><span>请问有没有大神知道Clash for Android URL配置怎么弄啊?</span></a></li>
-<li>然后, 给终端开代理<div class="tabs" id="terminalagent"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#terminalagent-1"><i class="fab fa-linux"></i>Linux</button></li><li class="tab"><button type="button" data-href="#terminalagent-2"><i class="fab fa-windows"></i>Windows</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="terminalagent-1"><p>如果你是<mark class="hl-label orange">Linux</mark> 系统, 则设置中设置手动网络代理-&gt;在http 和 https选项加入 clash 的 port号码, 如7890-&gt;打开你的终端, <code>sudo gedit ~/.bashrc</code>(如果你用zsh则<code>sudo gedit ~/.zshrc</code>(其他的话看你用什么shell))-&gt;末尾写入<code>export http_proxy=&quot;http://localhost:port&quot; </code>和<code>export https_proxy=&quot;https://localhost:port&quot;</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="terminalagent-2"><p>如果你是<mark class="hl-label blue">Windows</mark> 系统, 可以参考这一篇<a class="btn-beautify blue" href="https://blog.csdn.net/YZ930035683/article/details/102075969" 
-  title="给 Windows 的终端配置代理"><i class="far fa-hand-point-right"></i><span>给 Windows 的终端配置代理</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-</li>
-</ol>
-<p>然后你就可以愉快的使用git了!<br>
-如果VSCode的<code>git push</code>功能出现<code>fatal 443链接错误</code>了, 就可以直接在终端中输入指令来<code>push</code></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 技术笔记 </tag>
+            
+            <tag> VSCode </tag>
+            
+            <tag> IDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图形学RoadMap</title>
+      <link href="/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/"/>
+      <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
+      
+        <content type="html"><![CDATA[<h1>学习路径与资料</h1><ol><li>GAMES101<ol><li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li></ol></li><li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li></ol>]]></content>
+      
+      
       <categories>
-        <category>技术笔记</category>
-        <category>git</category>
+          
+          <category> 图形学 </category>
+          
       </categories>
-      <tags>
-        <tag>技术笔记</tag>
-        <tag>VSCode</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图形学RoadMap</title>
-    <url>/2022/05/09/%E5%9B%BE%E5%BD%A2%E5%AD%A6RoadMap/</url>
-    <content><![CDATA[<h1>学习路径与资料</h1>
-<ol>
-<li>GAMES101
-<ol>
-<li><a href="https://www.zhihu.com/column/c_1249465121615204352">计算机图形学系列笔记</a></li>
-</ol>
-</li>
-<li><a href="https://learnopengl-cn.github.io/">LearnOpenGL-CN</a></li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 图形学 </tag>
+            
+            <tag> RoadMap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GAMES202</title>
+      <link href="/2022/05/09/GAMES202/"/>
+      <url>/2022/05/09/GAMES202/</url>
+      
+        <content type="html"><![CDATA[<h1>踩坑</h1><ol><li>模型渲染不出来<ol><li>git clone three.js</li><li>把 homework 中的 MTLLoader、OBJLoader、OribitControls 用上面下载的文件进行替代</li><li>把下载的源码中的 three.min.js 放入 lib</li><li>修改 index.html 中<code>&lt;script src=&quot;lib/three.js&quot; defer&gt;&lt;/script&gt;</code><ol><li>改为<code>&lt;script src=&quot;lib/three.min.js&quot; defer&gt;&lt;/script&gt;</code></li></ol></li></ol></li></ol><h1>重难点</h1><h2 id="ShadowMap">ShadowMap</h2><ol><li>硬阴影<ol><li>渲染步骤<ol><li>以光源视角渲染场景<ol><li>生成 z-buffer，命名为 shadowMap</li></ol></li><li>以相机视角渲染场景<ol><li>对于任意一个 fragment（此处简单理解为像素），通过它的世界坐标和光源视角的 MVP 矩阵，可以算出光源视角下的对应的深度 d(shadowMCoord.z)与 z-buffer 的对应 UV 值（shadowCoord.xy）</li><li>通过 shadowCoord.xy 查询对应的 shadowMap 上的深度 s</li><li>如果 d&lt;=s，则可被光源看见，从而不在阴影中</li></ol></li></ol></li></ol></li></ol>]]></content>
+      
+      
       <categories>
-        <category>图形学</category>
+          
+          <category> 图形学 </category>
+          
+          <category> GAMES202 </category>
+          
       </categories>
-      <tags>
-        <tag>图形学</tag>
-        <tag>RoadMap</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>核心知识体系书单与课程</title>
-    <url>/2022/06/07/%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E4%B9%A6%E5%8D%95%E4%B8%8E%E8%AF%BE%E7%A8%8B/</url>
-    <content><![CDATA[<h1>说明</h1>
-<p>用英文写书名的要求直接阅读原版，有翻译的也建议对照参考，因为英文版印刷清晰且有彩色印刷（还有就是术语的问题）<br>
-看书不必要完全看完，根据自己的需求阅读；顺序也不必完全遵守，根据自己的需求排序或并行阅读</p>
-<p>TODO：之后有空写一写书评</p>
-<h1>知识</h1>
-<h2 id="哲学">哲学</h2>
-<h3 id="哲学导论">哲学导论</h3>
-<p>大问题：当之无愧的第一哲学导论，逻辑清晰，附有习题</p>
-<h3 id="哲学史">哲学史</h3>
-<p>哲学的历程：看过很多的哲学史，但论适合自学，还得是这本——内容详实，带有现代内容；附有习题</p>
-<h3 id="逻辑学">逻辑学</h3>
-<p>逻辑学导论（根斯勒）：多刷题吧</p>
-<h3 id="德国古典哲学">德国古典哲学</h3>
-<p>纯粹理性批判（邓晓芒 译）：邓晓芒去华科了，可惜，他翻译的康德三大批判是真的经典<br>
-精神现象学（先刚 译）：翻译的很好，但黑格尔不讲人话<br>
-小逻辑（梁志学 译）：翻译的很好，但黑格尔不讲人话</p>
-<h3 id="现象学">现象学</h3>
-<p>现象学导论（索科拉夫斯基）：通俗易懂，翻译水平也高<br>
-胡塞尔现象学</p>
-<h3 id="存在主义">存在主义</h3>
-<p>存在与时间（陈嘉映 译）</p>
-<h2 id="数学">数学</h2>
-<h3 id="微积分">微积分</h3>
-<p>Calculus（Larson 11E）<br>
-微积分五讲</p>
-<h3 id="线性代数">线性代数</h3>
-<p>线性代数及其应用<br>
-线性代数五讲</p>
-<h3 id="概率论与数理统计">概率论与数理统计</h3>
-<p>概率论与数理统计（茆诗松 3E）</p>
-<h3 id="复分析">复分析</h3>
-<p>复分析：可视化方法</p>
-<h3 id="信号与系统">信号与系统</h3>
-<p>信号与系统（奥本海姆 2E）：经典永不过时，要是我信号好好看这本书，完成习题，也不会考那么烂了吧</p>
-<h3 id="数值分析">数值分析</h3>
-<p>数值分析（萨奥尔 2E）</p>
-<h3 id="最优化方法">最优化方法</h3>
-<p>最优化：建模，算法与理论：又新又好的国内教材，涉及到大量的机器学习的应用</p>
-<h3 id="数学物理方法">数学物理方法</h3>
-<p>数学物理方法（顾樵）：如果我能认认真真看下来的话，数物方程也不会挂科吧</p>
-<h2 id="物理学">物理学</h2>
-<p>费曼物理学讲义［15 天］</p>
-<h2 id="电控">电控</h2>
-<h3 id="控制理论">控制理论</h3>
-<p>现代控制工程（Author：Katsuhiko Ogata Ver：5E）</p>
-<h3 id="电机拖动与电力电子技术">电机拖动与电力电子技术</h3>
-<p>电机、拖动及电力系统（6E）</p>
-<h2 id="计算机科学">计算机科学</h2>
-<h3 id="发展史">发展史</h3>
-<p>浪潮之巅</p>
-<h3 id="C-语言">C 语言</h3>
-<p>C 语言程序设计：现代方法（2E）（with 洛谷/力扣 C 语言语法题）</p>
-<h3 id="C">C++</h3>
-<p>白话 C++之练功<br>
-白话 C++之练武<br>
-C++语言的设计和演化<br>
-C++ Primer（with 侯捷 lecture）</p>
-<h3 id="离散数学">离散数学</h3>
-<p>Discrete Mathematics with Applications（Author：Susanna Epp Ver：5E）</p>
-<h3 id="数据结构与算法">数据结构与算法</h3>
-<p>数据结构（C++语言版 with 邓俊辉 lecture）<br>
-算法设计</p>
-<h3 id="电路基础与模拟电路">电路基础与模拟电路</h3>
-<p>模拟和数字电子电路基础</p>
-<h3 id="数字电路与微体系结构">数字电路与微体系结构</h3>
-<p>Digital Design and Computer Architecture（Ver：RISC-V 2E）：从数电学到微体系结构，层层递进；学数电时看的，知识点只讲需要的，且连贯性很强（国内有翻译版，推荐 ARM 翻译版，改进了不少错误：《数字设计和计算机体系结构》（Ver：ARM 2E））<br>
-汇编语言（4E）［5 天］：国内难得一见的优秀计算机教材，看起来不像是教材，反而像是推理小说；知识讲的非常明白，如果不会一定是自己的问题，只能说不愧是哲学家写的教科书</p>
-<h3 id="计算机组成原理">计算机组成原理</h3>
-<p>Computer Organization and Design：The Hardware/Software Interface（Ver：RISC-V 5E））：国内翻译版推荐《计算机组成与设计》（（Ver：ARM 5E）［10 天］</p>
-<h3 id="计算机体系结构">计算机体系结构</h3>
-<p>深入理解计算机系统（with CSAPP lab）</p>
-<h3 id="数据库系统">数据库系统</h3>
-<p>数据库系统概念（7E）</p>
-<h3 id="操作系统">操作系统</h3>
-<p>Operating System: Three Easy Pieces：有开源中文翻译版，可以配合南大老师蒋炎岩的课程和实验</p>
-<h3 id="计算机网络">计算机网络</h3>
-<p>网络是怎样连接的<br>
-计算机网络：自顶向下方法（with CS144 lab）</p>
-<h3 id="编译原理">编译原理</h3>
-<p>编译原理（with CS143 lab）<br>
-编译器设计（2E）</p>
-<h3 id="设计模式">设计模式</h3>
-<p>Head First 设计模式（2E）<br>
-游戏编程模式</p>
-<h2 id="计算机图形学">计算机图形学</h2>
-<h3 id="图形学基础">图形学基础</h3>
-<p>Fundamentals of Computer Graphics（5E with GAMES101 &amp; LearnOpenGL 的高级 OpenGL 前的部分)：以 GAMES101 为主进行学习，认真完成课后作业，完成后学 LearnOpenGL 进行回顾，想必这样就能有比较扎实的图形学基础了吧</p>
-<h3 id="渲染">渲染</h3>
-<p>全局光照技术（2E with Ray tracing in one weekend 三部曲）<br>
-Real Time Rendering（4E with GAMES202 &amp; LearnOpenGL 的后半部分）<br>
-Physical Based Rendering （4E）</p>
-<h3 id="引擎">引擎</h3>
-<p>游戏引擎架构（2E with GAMES104）</p>
-<h2 id="计算机视觉">计算机视觉</h2>
-<p>Digital Image Processing（3E）</p>
-<h2 id="机器学习">机器学习</h2>
-<p>机器学习实战<br>
-动手学深度学习<br>
-统计学习方法</p>
-]]></content>
-      <tags>
-        <tag>书单</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 图形学 </tag>
+            
+            <tag> GAMES202 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>一些细碎知识点的记录</title>
+      <link href="/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
+      <url>/2022/05/09/%E4%B8%80%E4%BA%9B%E7%BB%86%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h1>linux 操作</h1><h2 id="美化">美化</h2><ol><li>当 StartupWMClass 为空时，启动应用会出现双图标现象<ol><li>终端输入：xprop |grep WM_CLASS，此时鼠标指针会变成一个十字准心，然后点击一下正在运行的软件，终端会反馈一条信息，包括 2 个字符串</li><li>如果没有的话可以使用 Alt+CapsLock 切换多任务的时候查看进程名字。<br>把第 1 个（也可能是第 2 个）字符串里的内容添加到 StartupWMClass 里，保存，关闭应用重<br>新打开</li></ol></li><li>对于登录系统的紫色过渡动画，就是输入密码回车，到进入系统这个过程的紫色动画，可以通过 gnome 的扩展 extension 进行屏蔽，名字是 Good Bye GDM3 Login Screen to Desktop Flick for Ubuntu 20.04 only</li></ol><h2 id="系统">系统</h2><ol><li><p>重装系统</p><ol><li>重装 windows 后要<ol><li>把 ubuntu 顺位调高</li><li>在 shell 中输入<ol><li><code>sudo update-grub2</code></li></ol></li></ol></li></ol></li><li><p>git</p><ol><li>tag<ol><li>查看标签<ol><li><code>git tag </code></li></ol></li><li>查看对应标签状态<ol><li><code>git checkout 1.0.0</code></li></ol></li><li>创建带备注标签<ol><li><code>git tag -a 1.0.0 -m &quot;这是备注信息&quot;</code></li></ol></li><li>删除标签(本地)<ol><li><code>git tag -d 1.0.0</code></li></ol></li><li>将本地标签发布到远程仓库（所有）<ol><li><code>git push origin --tags</code></li></ol></li><li>将本地标签发布到远程仓库（指定版本）<ol><li><code>git push origin 1.0.0</code></li></ol></li></ol></li></ol></li><li><p>解压乱码</p><ol><li><code>unzip -O GBK xxx.zip</code> (用 CP936, GB18030 也可以)</li></ol></li></ol><h1>C++</h1><h2 id="性能调优">性能调优</h2><ol><li>profile<ol><li>使用 gprof</li></ol></li></ol><h1>Matlab</h1><ol><li>字体过小<ol><li><a href="https://liupei.ink/index.php/2021/02/16/linux%E4%B8%8Bmatlab%E5%AD%97%E4%BD%93%E8%BF%87%E5%B0%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">linux 下 matlab 字体过小解决方法</a></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> VSCode </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
