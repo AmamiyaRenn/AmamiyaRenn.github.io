@@ -6,7 +6,7 @@
   <link href="https://amamiyarenn.github.io/atom.xml" rel="self"/>
   
   <link href="https://amamiyarenn.github.io/"/>
-  <updated>2022-06-27T02:36:49.108Z</updated>
+  <updated>2022-06-27T07:42:21.830Z</updated>
   <id>https://amamiyarenn.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://amamiyarenn.github.io/2022/06/27/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>https://amamiyarenn.github.io/2022/06/27/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
     <published>2022-06-27T02:30:29.000Z</published>
-    <updated>2022-06-27T02:36:49.108Z</updated>
+    <updated>2022-06-27T07:42:21.830Z</updated>
     
-    <content type="html"><![CDATA[<h1>Windows</h1><p>保存：Ctrl+S</p><p>全选：Ctrl+A</p><p>切换窗口：Alt+Tab</p><p>窗口移动：Win+↑/↓/←/→</p><h1>VSCode</h1><p>命令面板：F1</p><p>打开文件：F1，然后 Backspace</p><p>关闭文件：Ctrl+W</p><p>撤销：Ctrl+Z</p><p>恢复：Ctrl+Shift+Z</p><p>上/下/左/右移动光标：↑/↓/←/→</p><p>行上/下交换：Alt+↑/↓</p><p>跳转到上/下个光标位置：Alt+←/→</p><p>跳转到词首/尾：Ctrl+←/→</p><p>跳转到行首/尾：Home/End</p><p>跳转到列首/尾：Ctrl+Home/End</p><p>跳转到行：Ctrl+G</p><p>跳转到括号：Ctrl+Shift+\</p><p>跳到定义：F12</p><p>查看定义：Alt+F12</p><p>向上/向下翻页：PageUp/PageDown</p><p>切换到左/右边的文件：Ctrl+PageUp/PageDown</p><p>向右拆分编辑器：Ctrl+\</p><p>行注释：Ctrl+/</p><p>选中：Shift+各种移动/跳转</p><p>复制/粘贴：Ctrl+C/V</p><p>向上/下插入光标：Ctrl+Alt+↑/↓</p><p>在下一个匹配项处插入光标：Ctrl+D</p><p>查找/替换匹配项：Ctrl+F/H</p><p>全局查找/替换匹配项：Ctrl+Shift+F/H</p><p>打开/关闭活动栏：Ctrl+B</p><p>打开/关闭面板：Ctrl+J</p><p>打开/关闭终端：Ctrl+`</p><p>查找活动栏/面板：Ctrl+Q</p>]]></content>
+    <content type="html"><![CDATA[<h1>说明</h1><p>这些快捷键对很多编辑器来说都是通用的，建议学一学</p><h1>文件操作</h1><p>保存：Ctrl+S<br>关闭文件：Ctrl+W<br>撤销：Ctrl+Z<br>恢复：Ctrl+Shift+Z<br>复制/粘贴：Ctrl+C/V<br>向上/向下翻页：PageUp/PageDown<br>切换到左/右边的文件：Ctrl+PageUp/PageDown</p><h1>选择操作</h1><p>全选：Ctrl+A<br>选中：Shift+各种移动/跳转</p><h1>光标操作</h1><p>上/下/左/右移动光标：↑/↓/←/→<br>向上/下插入光标：Ctrl+Alt+↑/↓<br>在下一个匹配项处插入光标：Ctrl+D<br>查找/替换匹配项：Ctrl+F/H<br>全局查找/替换匹配项：Ctrl+Shift+F/H</p><h1>窗口操作</h1><p>切换窗口：Alt+Tab<br>窗口移动：Win+↑/↓/←/→</p><h1>跳转操作</h1><p>行上/下交换：Alt+↑/↓<br>跳转到上/下个光标位置：Alt+←/→<br>跳转到词首/尾：Ctrl+←/→<br>跳转到行首/尾：Home/End<br>跳转到列首/尾：Ctrl+Home/End<br>跳转到行：Ctrl+G<br>跳转到括号：Ctrl+Shift+<br>跳到定义：F12<br>查看定义：Alt+F12</p><h1>VSCode 其他操作</h1><p>向右拆分编辑器：Ctrl+<br>行注释：Ctrl+/<br>命令面板：F1<br>打开文件：F1，然后 Backspace<br>打开/关闭活动栏：Ctrl+B<br>打开/关闭面板：Ctrl+J<br>打开/关闭终端：Ctrl+`<br>查找活动栏/面板：Ctrl+Q</p>]]></content>
     
     
     <summary type="html">一些常用的Windows与VSCode快捷键</summary>
@@ -204,9 +204,9 @@
     
     <category term="C/C++" scheme="https://amamiyarenn.github.io/tags/C-C/"/>
     
-    <category term="VSCode" scheme="https://amamiyarenn.github.io/tags/VSCode/"/>
-    
     <category term="教程" scheme="https://amamiyarenn.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="VSCode" scheme="https://amamiyarenn.github.io/tags/VSCode/"/>
     
     <category term="Linux" scheme="https://amamiyarenn.github.io/tags/Linux/"/>
     
